@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
 }
 .container {
-  padding: 5vw 6vw;
+  padding: 2vw 6vw;
   max-width: 800px;
   width: 100%;
   text-align: center;
@@ -24,8 +24,8 @@ body {
   align-items: center;
   width: 100%;
   max-width: 800px;
-  padding: 3vw 0;
-  margin-bottom: 2vw;
+  padding: 1vw 0;
+  margin-bottom: 1vw;
 }
 .logo {
   font-weight: 800;
@@ -48,15 +48,15 @@ nav a {
   font-weight: 500;
 }
 h1 {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 800;
   color: #1a202c;
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
 }
 p.subtitle {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   color: #4a5568;
-  margin-bottom: 4vw;
+  margin-bottom: 1.5vw;
 }
 .btn {
   background: #2e7d32;
@@ -67,14 +67,14 @@ p.subtitle {
   font-weight: 700;
   font-size: clamp(0.9rem, 2.2vw, 1.1rem);
   display: block;
-  margin: 3vw auto;
+  margin: 1.5vw auto;
   width: fit-content;
 }
 .features-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 4vw;
+  margin-top: 2vw;
 }
 
 ul.features {
@@ -149,10 +149,10 @@ input[type="submit"]:hover {
 }
 
 img {
-  max-width: clamp(250px, 50vw, 400px);
+  max-width: clamp(250px, 40vw, 350px);
   width: 100%;
   height: auto;
-  margin: 4vw 0;
+  margin: 1.5vw 0;
   border-radius: clamp(8px, 1.8vw, 12px);
 }
 
