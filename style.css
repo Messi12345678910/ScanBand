@@ -8,13 +8,11 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 .container {
   padding: 60px 40px;
-  max-width: 1200px;
-  width: 100%;
+  max-width: 600px;
+  width: 90%;
   text-align: center;
 }
 .header {
@@ -22,9 +20,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 600px;
   padding: 20px 0;
-  flex-wrap: wrap;
 }
 .logo {
   font-weight: 800;
@@ -40,7 +37,6 @@ nav {
   display: flex;
   gap: 20px;
   font-size: 0.95rem;
-  flex-wrap: wrap;
 }
 nav a {
   text-decoration: none;
@@ -48,13 +44,13 @@ nav a {
   font-weight: 500;
 }
 h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: 2.5rem;
   font-weight: 800;
   color: #1a202c;
   margin-bottom: 10px;
 }
 p.subtitle {
-  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-size: 1.125rem;
   color: #4a5568;
   margin-bottom: 30px;
 }
@@ -140,80 +136,19 @@ input[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form-wrapper,
+.container {
   max-width: 500px;
   width: 90%;
   margin: 0 auto;
+  text-align: center;
 }
 
 img {
-  max-width: min(500px, 90vw);
+  max-width: 100%;
   height: auto;
   margin: 20px 0;
   border-radius: 10px;
-}
-
-/* Mobile-first responsive design */
-@media (max-width: 768px) {
-  .container {
-    padding: 30px 20px;
-  }
-  
-  .header {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-  
-  nav {
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .btn {
-    padding: 12px 24px;
-    font-size: 0.95rem;
-  }
-  
-  ul.features li {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 20px 15px;
-  }
-  
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  nav a {
-    padding: 8px 0;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-  
-  ul.features {
-    gap: 8px;
-  }
-  
-  ul.features li {
-    font-size: 0.9rem;
-  }
-}
-
-/* Large screen optimizations */
-@media (min-width: 1200px) {
-  .container {
-    padding: 80px 60px;
-  }
-  
-  .features-wrapper {
-    margin-top: 50px;
-  }
 }
