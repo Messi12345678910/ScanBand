@@ -10,8 +10,8 @@ body {
   min-height: 100vh;
 }
 .container {
-  padding: 8vh 5vw;
-  max-width: 75vw;
+  padding: 60px 40px;
+  max-width: 600px;
   width: 90%;
   text-align: center;
 }
@@ -20,12 +20,12 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 75vw;
-  padding: 3vh 0;
+  max-width: 600px;
+  padding: 20px 0;
 }
 .logo {
   font-weight: 800;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: 1.25rem;
 }
 .logo span:first-child {
   color: #2e7d32; /* green */
@@ -35,8 +35,8 @@ body {
 }
 nav {
   display: flex;
-  gap: clamp(15px, 2vw, 25px);
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  gap: 20px;
+  font-size: 0.95rem;
 }
 nav a {
   text-decoration: none;
@@ -44,32 +44,32 @@ nav a {
   font-weight: 500;
 }
 h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: 2.5rem;
   font-weight: 800;
   color: #1a202c;
-  margin-bottom: 1vh;
+  margin-bottom: 10px;
 }
 p.subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: 1.125rem;
   color: #4a5568;
-  margin-bottom: 4vh;
+  margin-bottom: 30px;
 }
 .btn {
   background: #2e7d32;
   color: #fff;
-  padding: clamp(10px, 2vh, 16px) clamp(24px, 4vw, 40px);
-  border-radius: clamp(8px, 1.5vw, 12px);
+  padding: 14px 32px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
-  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-size: 1rem;
   display: inline-block;
-  margin: 3vh 0;
+  margin: 20px 0;
 }
 .features-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 4vh;
+  margin-top: 30px;
 }
 
 ul.features {
@@ -78,13 +78,13 @@ ul.features {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(8px, 1.5vh, 16px);
+  gap: 12px;
 }
 
 ul.features li {
   display: flex;
   align-items: flex-start;
-  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-size: 1rem;
   color: #1a1a1a;
   line-height: 1.5;
 }
@@ -93,7 +93,7 @@ ul.features li::before {
   content: '✔';
   color: #2e7d32;
   font-weight: bold;
-  margin-right: clamp(8px, 1.5vw, 14px);
+  margin-right: 12px;
   width: 1.5em;
   text-align: center;
   flex-shrink: 0;
@@ -102,29 +102,29 @@ ul.features li::before {
 
 
 .preorder-form {
-  margin-top: 5vh;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: clamp(10px, 2vh, 18px);
+  gap: 15px;
   width: 100%;
-  max-width: min(50vw, 400px);
+  max-width: 400px;
 }
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  padding: clamp(10px, 2vh, 14px);
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: clamp(6px, 1vw, 10px);
-  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+  border-radius: 8px;
+  font-size: 1rem;
   width: 100%;
 }
 input[type="submit"] {
   background: #2e7d32;
   color: white;
-  padding: clamp(10px, 2vh, 14px);
-  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+  padding: 12px;
+  font-size: 1rem;
   border: none;
-  border-radius: clamp(6px, 1vw, 10px);
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -147,8 +147,8 @@ input[type="submit"]:hover {
 }
 
 img {
-  max-width: min(60vw, 500px);
+  max-width: 100%;
   height: auto;
-  margin: 3vh 0;
-  border-radius: clamp(8px, 1.5vw, 12px);
+  margin: 20px 0;
+  border-radius: 10px;
 }
