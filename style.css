@@ -172,16 +172,15 @@ img {
 
 .about-content {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   gap: clamp(20px, 4vw, 40px);
-  max-width: clamp(700px, 95vw, 900px);
+  max-width: clamp(600px, 90vw, 800px);
   margin: 0 auto 4vw auto;
 }
 
 .about-image {
-  width: clamp(220px, 30vw, 300px);
-  height: clamp(280px, 35vw, 350px);
-  object-fit: cover;
+  max-width: clamp(180px, 25vw, 250px);
+  max-height: 1000px;
   border-radius: clamp(12px, 2.5vw, 16px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
@@ -197,10 +196,6 @@ img {
   border-radius: clamp(12px, 2.5vw, 16px);
   border-left: 4px solid #2e7d32;
   flex: 1;
-  height: clamp(280px, 35vw, 350px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .about-text br {
