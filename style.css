@@ -201,6 +201,16 @@ img {
   text-align: center;
 }
 
+.bold-word {
+  
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  color: #2e7d32
+  
+}
+
+
 .video-container {
   position: relative;
   width: 100%;
