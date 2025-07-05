@@ -1,7 +1,7 @@
 const form = document.getElementById("preorder-form");
 const thankYouMessage = document.getElementById("thankyou-message");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function(event) {
   event.preventDefault();
   const data = new FormData(form);
 
