@@ -50,7 +50,7 @@ nav a {
   color: #1a1a1a;
   font-weight: 500;
   white-space: nowrap;
-  padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 20px);
+  padding: clamp(8px, 1.5vw, 12px) 
   border-radius: clamp(6px, 1.2vw, 8px);
   transition: all 0.3s ease;
   position: relative;
