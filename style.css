@@ -88,6 +88,14 @@ p.subtitle {
   margin: 1.5vw auto;
   width: fit-content;
 }
+
+.btn:hover {
+  background: #3d8a41;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+}
+
 .features-wrapper {
   display: flex;
   justify-content: center;
