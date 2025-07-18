@@ -382,6 +382,10 @@ input[type="tel"]:focus {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-top: clamp(140px, 20vw, 180px);
+  }
+  
   .header {
     flex-direction: column;
     gap: clamp(16px, 3vw, 24px);
@@ -422,7 +426,7 @@ input[type="tel"]:focus {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 clamp(12px, 3vw, 16px);
+    padding: clamp(160px, 25vw, 200px) clamp(12px, 3vw, 16px) 0;
   }
   
   .header {
