@@ -45,12 +45,13 @@ body {
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 1vw 0;
   margin-bottom: 1vw;
+  gap: clamp(40px, 8vw, 80px);
 }
 .logo {
   font-weight: 800;
