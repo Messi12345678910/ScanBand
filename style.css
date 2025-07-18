@@ -299,33 +299,125 @@ img {
   border-radius: clamp(12px, 2.5vw, 16px);
 }
 
+/* Tablet optimizations */
+@media (max-width: 1024px) {
+  .main-sections {
+    flex-direction: column;
+    gap: 6vw;
+    align-items: center;
+  }
+  
+  .train-vision-section,
+  .scanning-matters-section {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .about-content {
+    gap: clamp(30px, 5vw, 40px);
+  }
+  
+  .about-text {
+    min-width: 300px;
+  }
+}
+
 /* Mobile optimizations */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    gap: 2vw;
+    gap: 3vw;
     text-align: center;
+    padding: 2vw 0;
   }
   
   nav {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(15px, 3vw, 20px);
   }
   
   .container {
-    padding: 8vw 5vw;
+    padding: 6vw 4vw;
   }
   
   .main-sections {
     flex-direction: column;
-    gap: 4vw;
+    gap: 8vw;
+    align-items: center;
+  }
+  
+  .train-vision-section,
+  .scanning-matters-section {
+    width: 100%;
+    max-width: 500px;
   }
   
   .about-content {
     flex-direction: column;
     text-align: center;
+    gap: 4vw;
   }
   
   .about-image {
-    max-width: clamp(200px, 50vw, 280px);
+    max-width: clamp(200px, 60vw, 300px);
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+  
+  .about-text {
+    min-width: unset;
+    width: 100%;
+    text-align: left;
+    padding: clamp(20px, 5vw, 30px);
+  }
+  
+  .video-container {
+    max-width: clamp(280px, 80vw, 350px);
+  }
+  
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+  }
+  
+  .importance-scanning {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+}
+
+/* Small mobile optimizations */
+@media (max-width: 480px) {
+  .container {
+    padding: 8vw 3vw;
+  }
+  
+  .header {
+    gap: 4vw;
+  }
+  
+  nav {
+    flex-direction: column;
+    gap: 3vw;
+  }
+  
+  nav a {
+    padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 20px);
+  }
+  
+  .main-sections {
+    gap: 10vw;
+  }
+  
+  .about-text {
+    padding: clamp(15px, 4vw, 25px);
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+  }
+  
+  ul.features {
+    gap: clamp(8px, 2.5vw, 12px);
+  }
+  
+  ul.features li {
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
   }
 }
