@@ -10,20 +10,45 @@ body {
   min-height: 100vh;
 }
 .container {
-  padding: 2vw 6vw;
-  max-width: 800px;
+  padding: 2vw 4vw;
+  max-width: 1400px;
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.main-sections {
+  display: flex;
+  gap: clamp(30px, 5vw, 60px);
+  width: 100%;
+  max-width: 1200px;
+  margin: 2vw 0 4vw 0;
+  align-items: flex-start;
+}
+
+.train-vision-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.scanning-matters-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   padding: 1vw 0;
   margin-bottom: 1vw;
 }
@@ -234,10 +259,10 @@ img {
 }
 
 .importance-scanning {
-  font-size: clamp(1.8rem, 4.5vw, 2.2rem);
+  font-size: clamp(1.6rem, 3.5vw, 2rem);
   font-weight: 700;
   color: #1a202c;
-  margin-top: 4vw;
+  margin-top: 0;
   margin-bottom: 2vw;
   text-align: center;
 }
@@ -287,6 +312,11 @@ img {
   
   .container {
     padding: 8vw 5vw;
+  }
+  
+  .main-sections {
+    flex-direction: column;
+    gap: 4vw;
   }
   
   .about-content {
