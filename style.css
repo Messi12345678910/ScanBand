@@ -26,8 +26,6 @@ body {
   max-width: 1200px;
   margin: 2vw 0 4vw 0;
   align-items: flex-start;
-  position: relative;
-  left: calc(50% - 600px + 180px);
 }
 
 .train-vision-section {
@@ -42,8 +40,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 .header {
   display: flex;
