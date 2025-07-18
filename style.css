@@ -383,7 +383,7 @@ input[type="tel"]:focus {
 
 @media (max-width: 768px) {
   .container {
-    padding-top: clamp(140px, 20vw, 180px);
+    padding-top: clamp(180px, 25vw, 220px);
   }
   
   .header {
@@ -426,7 +426,7 @@ input[type="tel"]:focus {
 
 @media (max-width: 480px) {
   .container {
-    padding: clamp(160px, 25vw, 200px) clamp(12px, 3vw, 16px) 0;
+    padding: clamp(200px, 30vw, 240px) clamp(12px, 3vw, 16px) 0;
   }
   
   .header {
