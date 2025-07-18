@@ -7,6 +7,10 @@
   scroll-behavior: smooth; 
 }
 
+html {
+  scroll-padding-top: clamp(120px, 15vw, 150px);
+}
+
 :root {
   --primary-green: #1B5E20;
   --primary-green-light: #2E7D32;
@@ -382,6 +386,10 @@ input[type="tel"]:focus {
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: clamp(180px, 25vw, 220px);
+  }
+  
   .container {
     padding-top: clamp(220px, 28vw, 260px);
   }
@@ -425,6 +433,10 @@ input[type="tel"]:focus {
 }
 
 @media (max-width: 480px) {
+  html {
+    scroll-padding-top: clamp(220px, 30vw, 280px);
+  }
+  
   .container {
     padding: clamp(250px, 35vw, 300px) clamp(12px, 3vw, 16px) 0;
   }
