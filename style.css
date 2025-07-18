@@ -26,6 +26,7 @@ body {
   max-width: 1200px;
   margin: 2vw 0 4vw 0;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .train-vision-section {
@@ -40,8 +41,18 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: auto;
+}
+
+.scanning-matters-section h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.scanning-matters-section .video-container {
+  align-self: flex-start;
 }
 .header {
   display: flex;
@@ -268,12 +279,12 @@ img {
 }
 
 .bold-word {
-  
+
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
   color: #2e7d32
-  
+
 }
 
 
@@ -305,25 +316,25 @@ img {
     gap: 2vw;
     text-align: center;
   }
-  
+
   nav {
     justify-content: center;
   }
-  
+
   .container {
     padding: 8vw 5vw;
   }
-  
+
   .main-sections {
     flex-direction: column;
     gap: 4vw;
   }
-  
+
   .about-content {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .about-image {
     max-width: clamp(200px, 50vw, 280px);
   }
