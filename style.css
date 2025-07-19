@@ -360,6 +360,58 @@ img:hover {
   border: none;
 }
 
+.video-unmute-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.video-unmute-overlay:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.unmute-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.unmute-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.unmute-button svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.unmute-button span {
+  color: white;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-unmute-overlay.hidden {
+  display: none;
+}
+
 /* About section */
 .about-section {
   margin-top: clamp(64px, 10vw, 96px);

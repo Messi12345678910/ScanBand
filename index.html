@@ -44,10 +44,20 @@
       <div class="scanning-matters-section">
         <h2 class="importance-scanning" id="importance">Why Scanning <span class="bold-word">Matters</span></h2>
         <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/H2JMPYP7VBE?autoplay=1&mute=1" title="YouTube video player"
+          <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/H2JMPYP7VBE?autoplay=1&mute=1" title="YouTube video player"
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
+          <div class="video-unmute-overlay" id="unmute-overlay">
+            <div class="unmute-button">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9V15H7L12 20V4L7 9H3Z" fill="white"/>
+                <path d="M16.5 12C16.5 10.23 15.48 8.71 14 7.97V16.02C15.48 15.29 16.5 13.77 16.5 12Z" fill="white"/>
+                <path d="M14 3.23V5.29C16.89 6.15 19 8.83 19 12C19 15.17 16.89 17.85 14 18.71V20.77C18.01 19.86 21 16.28 21 12C21 7.72 18.01 4.14 14 3.23Z" fill="white"/>
+              </svg>
+              <span>Click to unmute</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -71,6 +81,23 @@
     </div>
 
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const unmuteOverlay = document.getElementById('unmute-overlay');
+      const iframe = document.getElementById('youtube-video');
+      
+      unmuteOverlay.addEventListener('click', function() {
+        // Update iframe src to unmute the video
+        const currentSrc = iframe.src;
+        const newSrc = currentSrc.replace('mute=1', 'mute=0');
+        iframe.src = newSrc;
+        
+        // Hide the overlay
+        unmuteOverlay.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 
 </html>
