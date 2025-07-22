@@ -514,7 +514,25 @@ img:hover {
   color: var(--text-gray);
   line-height: 1.6;
   margin-bottom: clamp(24px, 4vw, 32px);
-  text-align: center;
+  text-align: left;
+  background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-gray) 100%);
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-green);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.recruiting-description::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--primary-green);
+  opacity: 0.3;
+  font-family: Georgia, serif;
 }
 
 .recruiting-btn {
@@ -629,11 +647,11 @@ input[type="tel"]:focus {
 
 @media (max-width: 768px) {
   html {
-    scroll-padding-top: clamp(180px, 25vw, 220px);
+    scroll-padding-top: clamp(200px, 28vw, 240px);
   }
   
   .container {
-    padding-top: clamp(220px, 28vw, 260px);
+    padding-top: clamp(240px, 32vw, 280px);
   }
   
   .header {
@@ -676,11 +694,11 @@ input[type="tel"]:focus {
 
 @media (max-width: 480px) {
   html {
-    scroll-padding-top: clamp(220px, 30vw, 280px);
+    scroll-padding-top: clamp(260px, 35vw, 320px);
   }
   
   .container {
-    padding: clamp(250px, 35vw, 300px) clamp(12px, 3vw, 16px) 0;
+    padding: clamp(280px, 40vw, 340px) clamp(12px, 3vw, 16px) 0;
   }
   
   .header {
