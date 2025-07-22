@@ -502,11 +502,36 @@ img:hover {
 }
 
 .recruiting-content {
-  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 6vw, 64px);
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.recruiting-image {
+  width: clamp(200px, 25vw, 300px);
+  height: clamp(280px, 30vw, 400px);
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.recruiting-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recruiting-text-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .recruiting-description {
@@ -522,6 +547,7 @@ img:hover {
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
   position: relative;
+  width: 100%;
 }
 
 .recruiting-description::before {
@@ -683,6 +709,23 @@ input[type="tel"]:focus {
   }
   
   .about-text {
+    min-width: unset;
+    width: 100%;
+  }
+  
+  .recruiting-content {
+    flex-direction: column;
+    text-align: center;
+    gap: clamp(24px, 4vw, 32px);
+  }
+  
+  .recruiting-image {
+    width: clamp(200px, 50vw, 280px);
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+  
+  .recruiting-text-content {
     min-width: unset;
     width: 100%;
   }
