@@ -525,32 +525,24 @@ img:hover {
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
 }
 
-.recruiting-text-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-}
-
-.recruiting-description {
+.recruiting-text {
   font-size: clamp(1rem, 1.8vw, 1.1rem);
   color: var(--text-gray);
   line-height: 1.6;
-  margin-bottom: clamp(24px, 4vw, 32px);
   text-align: left;
   background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-gray) 100%);
   padding: clamp(24px, 4vw, 32px);
   border-radius: var(--border-radius);
   border-left: 4px solid var(--primary-green);
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
   position: relative;
-  width: 100%;
 }
 
-.recruiting-description::before {
+.recruiting-text::before {
   content: '"';
   position: absolute;
   top: -10px;
@@ -559,6 +551,16 @@ img:hover {
   color: var(--primary-green);
   opacity: 0.3;
   font-family: Georgia, serif;
+}
+
+.recruiting-text br {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.recruiting-btn-container {
+  text-align: center;
+  margin-top: clamp(24px, 4vw, 32px);
 }
 
 .recruiting-btn {
@@ -725,7 +727,7 @@ input[type="tel"]:focus {
     aspect-ratio: 3/4;
   }
   
-  .recruiting-text-content {
+  .recruiting-text {
     min-width: unset;
     width: 100%;
   }
