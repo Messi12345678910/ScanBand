@@ -485,6 +485,96 @@ img:hover {
   margin-bottom: 1em;
 }
 
+/* Recruiting section */
+.recruiting-section {
+  margin-top: clamp(64px, 10vw, 96px);
+  padding-top: clamp(48px, 8vw, 64px);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.recruiting-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: clamp(24px, 4vw, 32px);
+  letter-spacing: -0.02em;
+}
+
+.recruiting-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recruiting-description {
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: clamp(24px, 4vw, 32px);
+  text-align: center;
+}
+
+.recruiting-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+  color: white;
+  padding: clamp(14px, 2.5vw, 18px) clamp(28px, 5vw, 36px);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  margin: clamp(12px, 2vw, 16px) 0;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+  border: none;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.recruiting-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.recruiting-btn:hover::before {
+  left: 100%;
+}
+
+.recruiting-btn:hover {
+  background: linear-gradient(135deg, var(--primary-green-dark) 0%, var(--primary-green) 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.4);
+}
+
+.recruiting-btn:active {
+  transform: translateY(0);
+}
+
+.recruiting-btn svg {
+  flex-shrink: 0;
+}
+
+.recruiting-note {
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: clamp(8px, 1.5vw, 12px);
+}
+
 /* Form styles for preorder page */
 .form-wrapper {
   max-width: 500px;
