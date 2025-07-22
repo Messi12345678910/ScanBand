@@ -621,6 +621,127 @@ img:hover {
   margin-top: clamp(8px, 1.5vw, 12px);
 }
 
+/* Modal styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.modal-content {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: translateY(0);
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(20px, 4vw, 24px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 4px;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: var(--text-dark);
+  transform: scale(1.1);
+}
+
+.modal-body {
+  padding: clamp(20px, 4vw, 24px);
+}
+
+.modal-body p {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: clamp(16px, 3vw, 20px);
+}
+
+.modal-body p:first-child {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+#email-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 3vw, 20px);
+}
+
+#email-input {
+  padding: clamp(12px, 2.5vw, 16px);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-family: inherit;
+  transition: var(--transition);
+  background: var(--bg-white);
+}
+
+#email-input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+  color: white;
+  padding: clamp(14px, 2.5vw, 18px) clamp(28px, 5vw, 36px);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+  border: none;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+}
+
+.modal-btn:hover {
+  background: linear-gradient(135deg, var(--primary-green-dark) 0%, var(--primary-green) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.4);
+}
+
 /* Form styles for preorder page */
 .form-wrapper {
   max-width: 500px;

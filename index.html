@@ -93,13 +93,30 @@
         <img src="Images/Columbia Post.png" alt="Connor Owen Columbia Post" class="recruiting-image">
       </div>
       <div class="recruiting-btn-container">
-        <a href="https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing" 
-           class="recruiting-btn" target="_blank">
+        <button id="recruiting-btn" class="recruiting-btn">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" fill="currentColor"/>
           </svg>
           Access Recruiting Spreadsheet
-        </a>
+        </button>
+      </div>
+    </div>
+
+    <!-- Email Collection Modal -->
+    <div id="email-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Join My Email List</h3>
+          <button id="close-modal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Before accessing my recruiting spreadsheet, I'd love to share recruiting tips, training insights, and strategies to level up your game!</p>
+          <p>Enter your email to join my mailing list and get the spreadsheet:</p>
+          <form id="email-form">
+            <input type="email" id="email-input" placeholder="Enter your email address" required>
+            <button type="submit" class="modal-btn">Get Spreadsheet Access</button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -118,6 +135,46 @@
 
         // Hide the overlay
         unmuteOverlay.classList.add('hidden');
+      });
+
+      // Modal functionality
+      const modal = document.getElementById('email-modal');
+      const recruitingBtn = document.getElementById('recruiting-btn');
+      const closeModal = document.getElementById('close-modal');
+      const emailForm = document.getElementById('email-form');
+
+      // Open modal when recruiting button is clicked
+      recruitingBtn.addEventListener('click', function() {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Close modal when X is clicked
+      closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close modal when clicking outside of it
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Handle email form submission
+      emailForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('email-input').value;
+        
+        // Log email for collection (you can integrate with your email service)
+        console.log('Email collected for mailing list:', email);
+        
+        // Close modal and open spreadsheet
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        window.open('https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing', '_blank');
       });
     });
   </script>
