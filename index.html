@@ -93,28 +93,13 @@
         <img src="Images/Columbia Post.png" alt="Connor Owen Columbia Post" class="recruiting-image">
       </div>
       <div class="recruiting-btn-container">
-        <div id="email-form-container">
-          <form id="recruiting-email-form">
-            <input type="email" id="recruiting-email" name="email" placeholder="Enter your email for access" required />
-            <button type="submit" class="recruiting-btn">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" fill="currentColor"/>
-              </svg>
-              Access Recruiting Spreadsheet
-            </button>
-          </form>
-          <p class="recruiting-note">Join our mailing list for recruiting tips and ScanBand updates</p>
-        </div>
-        <div id="recruiting-success" style="display: none;">
-          <p style="color: var(--primary-green); font-weight: 600; margin-bottom: 16px;">✅ Thanks! Here's your access:</p>
-          <a href="https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing" 
-             class="recruiting-btn" target="_blank">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" fill="currentColor"/>
-            </svg>
-            Open Recruiting Spreadsheet
-          </a>
-        </div>
+        <a href="https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing" 
+           class="recruiting-btn" target="_blank">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" fill="currentColor"/>
+          </svg>
+          Access Recruiting Spreadsheet
+        </a>
       </div>
     </div>
 
@@ -133,23 +118,6 @@
 
         // Hide the overlay
         unmuteOverlay.classList.add('hidden');
-      });
-
-      // Handle recruiting email form
-      const recruitingForm = document.getElementById('recruiting-email-form');
-      const emailFormContainer = document.getElementById('email-form-container');
-      const successContainer = document.getElementById('recruiting-success');
-
-      recruitingForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = document.getElementById('recruiting-email').value;
-        
-        // Here you can add code to save the email to your mailing list
-        // For now, we'll just show the success message and spreadsheet access
-        console.log('Email collected:', email);
-        
-        emailFormContainer.style.display = 'none';
-        successContainer.style.display = 'block';
       });
     });
   </script>

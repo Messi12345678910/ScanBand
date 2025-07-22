@@ -621,36 +621,6 @@ img:hover {
   margin-top: clamp(8px, 1.5vw, 12px);
 }
 
-/* Recruiting email form */
-#recruiting-email-form {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(12px, 2vw, 16px);
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-#recruiting-email {
-  padding: clamp(12px, 2.5vw, 16px);
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  font-family: inherit;
-  transition: var(--transition);
-  background: var(--bg-white);
-  text-align: center;
-}
-
-#recruiting-email:focus {
-  outline: none;
-  border-color: var(--primary-green);
-  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
-}
-
-#recruiting-email::placeholder {
-  color: var(--text-light);
-}
-
 /* Form styles for preorder page */
 .form-wrapper {
   max-width: 500px;
