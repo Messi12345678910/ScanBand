@@ -437,10 +437,6 @@ img:hover {
 .about-title {
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 50%, var(--primary-green-dark) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   color: var(--text-dark);
   text-align: center;
   margin-bottom: clamp(32px, 6vw, 48px);
@@ -574,10 +570,6 @@ img:hover {
 .recruiting-title {
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 50%, var(--primary-green-dark) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   color: var(--text-dark);
   text-align: center;
   margin-bottom: clamp(32px, 6vw, 48px);
