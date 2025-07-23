@@ -161,8 +161,10 @@
         </div>
         <div class="modal-body">
           <p>Enter your email to get the spreadsheet and join my monthly email list:</p>
-          <form id="email-form">
-            <input type="email" id="email-input" placeholder="Enter your email address" required>
+          <form id="email-form" action="https://formspree.io/f/mzzvegnj" method="POST">
+            <input type="email" name="email" id="email-input" placeholder="Enter your email address" required>
+            <input type="hidden" name="_subject" value="New ScanBand Email Signup">
+            <input type="hidden" name="_next" value="https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing">
             <button type="submit" class="modal-btn">Get Spreadsheet Access</button>
           </form>
         </div>
@@ -212,18 +214,30 @@
         }
       });
 
-      // Handle email form submission
+      // Handle email form submission with Formspree
       emailForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const email = document.getElementById('email-input').value;
         
-        // Log email for collection (you can integrate with your email service)
-        console.log('Email collected for mailing list:', email);
+        const formData = new FormData(emailForm);
         
-        // Close modal and open spreadsheet
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        window.open('https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing', '_blank');
+        fetch(emailForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            // Close modal and open spreadsheet
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            window.open('https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing', '_blank');
+          } else {
+            alert('Something went wrong. Please try again.');
+          }
+        }).catch(error => {
+          alert('Something went wrong. Please try again.');
+        });
       });
     });
   </script>
