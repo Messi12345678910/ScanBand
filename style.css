@@ -470,14 +470,7 @@ img:hover {
 }
 
 .about-text::before {
-  content: '"';
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  font-size: 4rem;
-  color: var(--primary-green);
-  opacity: 0.3;
-  font-family: Georgia, serif;
+  display: none;
 }
 
 .about-text br {
@@ -543,14 +536,7 @@ img:hover {
 }
 
 .recruiting-text::before {
-  content: '"';
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  font-size: 4rem;
-  color: var(--primary-green);
-  opacity: 0.3;
-  font-family: Georgia, serif;
+  display: none;
 }
 
 .recruiting-text br {
