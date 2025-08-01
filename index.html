@@ -228,18 +228,28 @@
           }
         }).then(response => {
           if (response.ok) {
-            // Close modal
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            
             // Check if mobile device
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             
             if (isMobile) {
-              // On mobile, redirect current window
-              window.location.href = 'https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing';
+              // On mobile, show loading message and redirect
+              document.querySelector('.modal-body').innerHTML = `
+                <p style="text-align: center; font-weight: 600; color: var(--primary-green);">
+                  ✅ Success! Redirecting to spreadsheet...
+                </p>
+                <p style="text-align: center; color: var(--text-gray); font-size: 0.9rem;">
+                  If it doesn't redirect automatically, <a href="https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing" style="color: var(--primary-green);">click here</a>
+                </p>
+              `;
+              
+              // Redirect after 2 seconds
+              setTimeout(() => {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing';
+              }, 2000);
             } else {
-              // On desktop, open new tab
+              // On desktop, close modal and open new tab
+              modal.style.display = 'none';
+              document.body.style.overflow = 'auto';
               window.open('https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing', '_blank');
             }
           } else {
