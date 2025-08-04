@@ -1069,11 +1069,11 @@ input[type="tel"]:focus {
 
 @media (max-width: 768px) {
   html {
-    scroll-padding-top: clamp(220px, 30vw, 260px);
+    scroll-padding-top: clamp(240px, 32vw, 280px);
   }
   
   .container {
-    padding-top: clamp(260px, 35vw, 300px);
+    padding-top: clamp(280px, 38vw, 320px);
   }
   
   .header {
@@ -1150,11 +1150,11 @@ input[type="tel"]:focus {
 
 @media (max-width: 480px) {
   html {
-    scroll-padding-top: clamp(280px, 38vw, 340px);
+    scroll-padding-top: clamp(300px, 40vw, 360px);
   }
   
   .container {
-    padding: clamp(300px, 42vw, 360px) clamp(12px, 3vw, 16px) 0;
+    padding: clamp(320px, 45vw, 380px) clamp(12px, 3vw, 16px) 0;
   }
   
   .header {
