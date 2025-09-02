@@ -64,7 +64,22 @@
   <div class="container">
     <div class="header">
       <a href="index.html" class="logo"><span>SCAN</span><span>BAND</span></a>
-      <nav>
+      <div class="header-controls">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1_3LbjxgA9CzkRsGlgER_4Zs3qUi9UdGW2VLzMscOdoBCAA/viewform?usp=dialog" 
+           class="header-buy-btn" target="_blank">Buy Now</a>
+        <button class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#importance">Why Scanning Matters</a>
+        <a href="#about">About the Inventor</a>
+        <a href="#users-say">What Users Say</a>
+        <a href="#recruiting">Recruiting Resources</a>
+      </nav>
+      <nav class="desktop-nav">
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSc1_3LbjxgA9CzkRsGlgER_4Zs3qUi9UdGW2VLzMscOdoBCAA/viewform?usp=dialog" target="_blank">Buy
           Now</a>
@@ -282,6 +297,34 @@
         }).catch(error => {
           alert('Something went wrong. Please try again.');
         });
+      });
+
+      // Mobile navigation toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+      });
+
+      // Close mobile menu when clicking on a link
+      navMenu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
       });
     });
   </script>
