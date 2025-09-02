@@ -266,6 +266,9 @@ nav a:hover {
 .main-header {
   text-align: center;
   margin-bottom: clamp(48px, 8vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-header h1 {
@@ -287,11 +290,15 @@ nav a:hover {
   font-size: clamp(1.3rem, 2.8vw, 1.5rem);
   font-weight: 600;
   color: var(--text-dark);
-  margin: 0 auto;
+  margin: 0 auto clamp(32px, 6vw, 48px);
   max-width: 700px;
   line-height: 1.4;
   text-align: center;
   animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.main-header .video-container {
+  margin-top: clamp(16px, 3vw, 24px);
 }
 
 /* Main sections layout */
