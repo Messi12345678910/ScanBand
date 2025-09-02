@@ -276,11 +276,21 @@ nav a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: var(--text-dark);
-  margin-bottom: 0;
+  margin-bottom: clamp(16px, 3vw, 24px);
   letter-spacing: -0.02em;
   line-height: 1.2;
   animation: fadeInUp 0.8s ease-out;
   position: relative;
+}
+
+.main-header h2 {
+  font-size: clamp(1.1rem, 2.2vw, 1.25rem);
+  font-weight: 400;
+  color: var(--text-gray);
+  margin-bottom: 0;
+  max-width: 600px;
+  line-height: 1.5;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 /* Main sections layout */
