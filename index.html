@@ -153,6 +153,12 @@
     observer.observe(section);
   });
 
+  // Observe features for bullet animations
+  const featuresSection = document.querySelector('.main-header .features');
+  if (featuresSection) {
+    observer.observe(featuresSection);
+  }
+
   // Add CSS for animation
   const style = document.createElement('style');
   style.textContent = `
