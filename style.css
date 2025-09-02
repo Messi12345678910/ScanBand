@@ -301,6 +301,17 @@ nav a:hover {
   margin-top: clamp(16px, 3vw, 24px);
 }
 
+.main-header .btn {
+  margin: clamp(24px, 4vw, 32px) 0 clamp(16px, 3vw, 24px);
+}
+
+.main-header .features-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+}
+
 /* Main sections layout */
 .main-sections {
   display: grid;
