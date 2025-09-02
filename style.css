@@ -316,7 +316,7 @@ nav a:hover {
 
 .main-header .features {
   margin: 0;
-  max-width: 1000px;
+  max-width: 560px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -327,7 +327,7 @@ nav a:hover {
 .main-header .features li:nth-child(3) {
   grid-column: 1 / -1;
   justify-self: center;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 /* Main sections layout */
