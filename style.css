@@ -483,12 +483,19 @@ img:hover {
   flex-shrink: 0;
 }
 
+/* Video section */
+.video-section {
+  display: flex;
+  justify-content: center;
+  margin: clamp(32px, 6vw, 48px) 0 clamp(64px, 10vw, 96px);
+}
+
 /* Video container */
 .video-container {
   position: relative;
   width: 100%;
-  max-width: clamp(320px, 50vw, 400px);
-  aspect-ratio: 9/16;
+  max-width: clamp(480px, 70vw, 800px);
+  aspect-ratio: 16/9;
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -1320,7 +1327,8 @@ input[type="tel"]:focus {
   }
 
   .video-container {
-    max-width: clamp(300px, 70vw, 360px);
+    max-width: clamp(320px, 90vw, 600px);
+    aspect-ratio: 16/9;
   }
 }
 
