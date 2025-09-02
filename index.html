@@ -98,15 +98,6 @@
           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
-        <div class="video-play-overlay" id="play-overlay">
-          <div class="play-button">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.9)"/>
-              <polygon points="10,8 16,12 10,16" fill="#1B5E20"/>
-            </svg>
-            <span>Click to play</span>
-          </div>
-        </div>
       </div>
     </header>
 
@@ -212,19 +203,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const playOverlay = document.getElementById('play-overlay');
-      const iframe = document.getElementById('youtube-video');
-
-      playOverlay.addEventListener('click', function() {
-        // Update iframe src to autoplay the video
-        const currentSrc = iframe.src;
-        const newSrc = currentSrc + '?autoplay=1';
-        iframe.src = newSrc;
-
-        // Hide the overlay
-        playOverlay.classList.add('hidden');
-      });
-
       // Modal functionality
       const modal = document.getElementById('email-modal');
       const recruitingBtn = document.getElementById('recruiting-btn');
