@@ -319,13 +319,20 @@ nav a:hover {
 .main-header .features-wrapper {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   margin-top: 0;
   flex: 1;
+  height: 315px;
 }
 
 .main-header .features {
   margin: 0;
   max-width: none;
+  width: 100%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Main sections layout */
