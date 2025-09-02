@@ -1,4 +1,3 @@
-
 /* Reset and base styles */
 * { 
   margin: 0; 
@@ -1193,22 +1192,22 @@ input[type="tel"]:focus {
   .main-header {
     margin-bottom: clamp(32px, 6vw, 48px);
   }
-  
+
   .main-header h1 {
     font-size: clamp(2rem, 5vw, 3rem);
   }
-  
+
   .main-sections {
     grid-template-columns: 1fr;
     gap: clamp(48px, 8vw, 64px);
     max-width: 600px;
     margin: 0 auto clamp(64px, 10vw, 96px);
   }
-  
+
   .about-content {
     gap: clamp(24px, 4vw, 32px);
   }
-  
+
   .about-text {
     min-width: 280px;
   }
@@ -1218,97 +1217,100 @@ input[type="tel"]:focus {
   html {
     scroll-padding-top: 80px;
   }
-  
+
   .container {
     padding-top: 80px;
+    padding-left: clamp(16px, 4vw, 32px);
+    padding-right: clamp(16px, 4vw, 32px);
+    padding-bottom: 0;
   }
-  
+
   .header {
     flex-direction: row;
     justify-content: space-between;
     gap: 16px;
     padding: 16px 20px;
   }
-  
+
   .desktop-nav {
     display: none;
   }
-  
+
   .header-controls {
     display: flex;
   }
-  
+
   .nav-toggle {
     display: flex;
   }
-  
+
   .header-buy-btn {
     display: inline-flex;
   }
-  
+
   .main-header {
     margin-bottom: clamp(24px, 5vw, 32px);
   }
-  
+
   .main-header h1 {
     font-size: clamp(1.75rem, 4.5vw, 2.5rem);
   }
-  
+
   .main-sections {
     gap: clamp(40px, 8vw, 56px);
   }
-  
+
   .about-content {
     flex-direction: column;
     text-align: center;
     gap: clamp(24px, 4vw, 32px);
   }
-  
+
   .about-image {
     width: clamp(200px, 50vw, 280px);
     height: auto;
     aspect-ratio: 3/4;
   }
-  
+
   .about-text {
     min-width: unset;
     width: 100%;
   }
-  
+
   .users-say-content {
     flex-direction: column;
     text-align: center;
     gap: clamp(24px, 4vw, 32px);
   }
-  
+
   .users-say-content .video-container {
     width: clamp(200px, 50vw, 280px);
     height: auto;
     aspect-ratio: 9/16;
   }
-  
+
   .users-say-text {
     min-width: unset;
     width: 100%;
   }
-  
+
   .recruiting-content {
     flex-direction: column;
     text-align: center;
     gap: clamp(24px, 4vw, 32px);
   }
-  
+
   .recruiting-image {
     width: clamp(200px, 50vw, 280px);
     height: auto;
     aspect-ratio: 3/4;
   }
-  
+
   .recruiting-text {
     min-width: unset;
     width: 100%;
   }
-  
+
   .video-container {
     max-width: clamp(300px, 70vw, 360px);
   }
@@ -1318,28 +1320,28 @@ input[type="tel"]:focus {
   html {
     scroll-padding-top: clamp(300px, 40vw, 360px);
   }
-  
+
   .container {
     padding: clamp(320px, 45vw, 380px) clamp(12px, 3vw, 16px) 0;
   }
-  
+
   .header {
     gap: clamp(16px, 4vw, 20px);
   }
-  
+
   nav {
     flex-direction: column;
     gap: clamp(8px, 2vw, 12px);
   }
-  
+
   .main-sections {
     gap: clamp(32px, 8vw, 48px);
   }
-  
+
   .features {
     max-width: 100%;
   }
-  
+
   .about-text {
     padding: clamp(16px, 4vw, 20px);
     font-size: clamp(0.9rem, 2vw, 1rem);
