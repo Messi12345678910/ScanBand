@@ -364,12 +364,6 @@ nav a:hover {
   border: 1px solid rgba(226, 232, 240, 0.6);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.main-header .features.animate-in {
   opacity: 1;
   transform: translateY(0);
 }
@@ -564,24 +558,6 @@ img:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   font-weight: 500;
   position: relative;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.features li:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.features li:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.features li:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.features.animate-in li {
   opacity: 1;
   transform: translateY(0);
 }
