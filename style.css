@@ -297,8 +297,19 @@ nav a:hover {
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.main-header .video-container {
+.video-features-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 6vw, 48px);
   margin-top: clamp(16px, 3vw, 24px);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.main-header .video-container {
+  margin-top: 0;
+  flex-shrink: 0;
 }
 
 .main-header .btn {
@@ -307,9 +318,14 @@ nav a:hover {
 
 .main-header .features-wrapper {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
   margin-top: 0;
+  flex: 1;
+}
+
+.main-header .features {
+  margin: 0;
+  max-width: none;
 }
 
 /* Main sections layout */
@@ -1291,6 +1307,16 @@ input[type="tel"]:focus {
 
   .main-header h1 {
     font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  }
+
+  .video-features-container {
+    flex-direction: column;
+    gap: clamp(24px, 4vw, 32px);
+  }
+
+  .main-header .features-wrapper {
+    justify-content: center;
+    width: 100%;
   }
 
   .main-sections {
