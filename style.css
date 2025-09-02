@@ -1219,10 +1219,7 @@ input[type="tel"]:focus {
   }
 
   .container {
-    padding-top: 80px;
-    padding-left: clamp(16px, 4vw, 32px);
-    padding-right: clamp(16px, 4vw, 32px);
-    padding-bottom: 0;
+    padding: 80px clamp(16px, 4vw, 32px) 0 !important;
   }
 
   .header {
