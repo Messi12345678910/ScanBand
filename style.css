@@ -517,8 +517,14 @@ nav a:hover {
 
 .simple-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(12px, 2vw, 20px);
+}
+
+.gallery-item:nth-child(3) {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .gallery-item {
@@ -1520,7 +1526,7 @@ input[type="tel"]:focus {
   }
 
   .simple-gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: clamp(8px, 2vw, 12px);
   }
 
@@ -1622,7 +1628,7 @@ input[type="tel"]:focus {
   }
 
   .simple-gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: clamp(6px, 1.5vw, 10px);
   }
 
