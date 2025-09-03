@@ -518,39 +518,27 @@ nav a:hover {
 .simple-content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: clamp(24px, 4vw, 32px);
+  gap: clamp(32px, 6vw, 48px);
 }
 
 .simple-content-top {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: clamp(32px, 6vw, 48px);
-  align-items: start;
-}
-
-.simple-bottom-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: clamp(300px, 40vw, 400px);
-  margin: 0 auto;
 }
 
 .simple-gallery {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr auto;
-  gap: clamp(16px, 3vw, 24px);
-  width: clamp(200px, 25vw, 280px);
-}
-
-.simple-gallery .gallery-item:nth-child(1),
-.simple-gallery .gallery-item:nth-child(2) {
-  grid-column: 1;
-}
-
-.simple-gallery .gallery-item:nth-child(3) {
-  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 4vw, 32px);
   width: 100%;
-  margin-top: clamp(24px, 4vw, 32px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.simple-gallery .gallery-item {
+  width: 100%;
 }
 
 .gallery-item {
@@ -1546,29 +1534,9 @@ input[type="tel"]:focus {
     margin: 0 auto clamp(64px, 10vw, 96px);
   }
 
-  .simple-content-top {
-    grid-template-columns: 1fr;
-    gap: clamp(24px, 4vw, 32px);
-  }
-
   .simple-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    gap: clamp(12px, 2vw, 16px);
-    width: 100%;
-  }
-
-  .simple-gallery .gallery-item:nth-child(1),
-  .simple-gallery .gallery-item:nth-child(2) {
-    grid-column: auto;
-  }
-
-  .simple-gallery .gallery-item:nth-child(3) {
-    display: none;
-  }
-
-  .simple-bottom-image {
-    display: block;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 3vw, 24px);
   }
 
   .about-content {
@@ -1663,16 +1631,9 @@ input[type="tel"]:focus {
     aspect-ratio: 9/16;
   }
 
-  .simple-content-top {
-    grid-template-columns: 1fr;
-    gap: clamp(16px, 3vw, 24px);
-  }
-
   .simple-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    gap: clamp(8px, 1.5vw, 12px);
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(12px, 2vw, 16px);
   }
 
   .users-say-text {
