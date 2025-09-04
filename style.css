@@ -803,6 +803,30 @@ nav a:hover {
   gap: clamp(32px, 6vw, 48px);
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+}
+
+.scanning-stats::before {
+  content: 'VS';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--primary-green);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.9) 100%);
+  backdrop-filter: blur(15px);
+  border: 2px solid var(--primary-green);
+  border-radius: 50%;
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(27, 94, 32, 0.3);
+  z-index: 10;
+  letter-spacing: -0.02em;
 }
 
 .stat-card {
@@ -836,12 +860,13 @@ nav a:hover {
 }
 
 .stat-number {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(4rem, 8vw, 6rem);
   font-weight: 800;
   color: var(--primary-green);
   margin-bottom: clamp(16px, 3vw, 24px);
   text-shadow: 0 2px 4px rgba(27, 94, 32, 0.2);
   letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 .messi-stat .stat-number {
@@ -2015,6 +2040,10 @@ input[type="tel"]:focus {
   .scanning-stats {
     grid-template-columns: 1fr;
     gap: clamp(24px, 5vw, 32px);
+  }
+
+  .scanning-stats::before {
+    display: none;
   }
 
   .stat-card {
