@@ -1107,7 +1107,7 @@ nav a:hover {
   gap: clamp(16px, 3vw, 24px);
 }
 
-.story-gallery:not(.single-image) {
+.story-gallery:not(.single-image):not(.bookie-gallery) {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -1115,6 +1115,12 @@ nav a:hover {
   grid-template-columns: 1fr;
   max-width: 400px;
   justify-self: center;
+}
+
+.story-gallery.bookie-gallery {
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px, 2vw, 16px);
+  max-width: none;
 }
 
 .story-gallery .gallery-item {
@@ -2367,9 +2373,14 @@ input[type="tel"]:focus {
     order: 2 !important;
   }
 
-  .story-gallery:not(.single-image) {
+  .story-gallery:not(.single-image):not(.bookie-gallery) {
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(12px, 2vw, 16px);
+  }
+
+  .story-gallery.bookie-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(10px, 2vw, 14px);
   }
 
   .video-container {
@@ -2415,9 +2426,14 @@ input[type="tel"]:focus {
     padding: clamp(20px, 4vw, 24px);
   }
 
-  .story-gallery:not(.single-image) {
+  .story-gallery:not(.single-image):not(.bookie-gallery) {
     grid-template-columns: 1fr;
     gap: clamp(8px, 2vw, 12px);
+  }
+
+  .story-gallery.bookie-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(8px, 1.5vw, 10px);
   }
 
   .story-gallery .gallery-item img {
