@@ -1117,6 +1117,151 @@ nav a:hover {
   justify-self: center;
 }
 
+/* Single column story content */
+.story-content.single-column {
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 6vw, 48px);
+  text-align: center;
+}
+
+.story-text.centered {
+  text-align: center;
+  order: 1;
+}
+
+/* Large Bookie Cushion gallery */
+.story-gallery.bookie-gallery-large {
+  order: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(32px, 5vw, 48px);
+  max-width: 1100px;
+  margin: clamp(32px, 6vw, 48px) auto 0;
+  padding: 0;
+}
+
+.story-gallery.bookie-gallery-large .gallery-item {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.9) 100%);
+  border-radius: clamp(20px, 4vw, 24px);
+  padding: clamp(24px, 4vw, 32px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  transition: var(--transition);
+  overflow: visible;
+}
+
+.story-gallery.bookie-gallery-large .gallery-item::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: linear-gradient(45deg, var(--primary-green), var(--accent-green), var(--primary-green-light));
+  border-radius: clamp(24px, 5vw, 28px);
+  z-index: -1;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.story-gallery.bookie-gallery-large .gallery-item:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.story-gallery.bookie-gallery-large .gallery-item:hover::before {
+  opacity: 0.15;
+}
+
+.story-gallery.bookie-gallery-large .gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  object-position: center;
+  border-radius: clamp(16px, 3vw, 20px);
+  transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
+  padding: clamp(12px, 2vw, 16px);
+}
+
+.story-gallery.bookie-gallery-large .gallery-item:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.story-gallery.bookie-gallery-large .gallery-step {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 16px);
+  margin-bottom: clamp(20px, 3vw, 24px);
+  padding-bottom: clamp(12px, 2vw, 16px);
+  border-bottom: 2px solid rgba(27, 94, 32, 0.1);
+}
+
+.story-gallery.bookie-gallery-large .step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(36px, 6vw, 44px);
+  height: clamp(36px, 6vw, 44px);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+  color: white;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(27, 94, 32, 0.3);
+  flex-shrink: 0;
+}
+
+.story-gallery.bookie-gallery-large .step-label {
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-weight: 600;
+  color: var(--primary-green-dark);
+  text-align: left;
+  line-height: 1.3;
+}
+
+/* Large highlight section */
+.story-highlight-large {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+  color: white;
+  padding: clamp(48px, 8vw, 64px);
+  border-radius: clamp(24px, 4vw, 32px);
+  box-shadow: 0 15px 50px rgba(46, 125, 50, 0.4);
+  position: relative;
+  overflow: hidden;
+  margin: clamp(32px, 6vw, 48px) auto;
+  max-width: 800px;
+}
+
+.story-highlight-large::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+
+.story-highlight-large:hover::before {
+  left: 100%;
+}
+
+.story-highlight-large h3 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.01em;
+  color: white;
+  text-align: center;
+}
+
+/* Keep original bookie gallery for backwards compatibility */
 .story-gallery.bookie-gallery {
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(20px, 3vw, 28px);
@@ -2468,6 +2613,16 @@ input[type="tel"]:focus {
     gap: clamp(16px, 3vw, 20px);
   }
 
+  .story-gallery.bookie-gallery-large {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(24px, 4vw, 32px);
+    margin: clamp(24px, 4vw, 32px) auto 0;
+  }
+
+  .story-gallery.bookie-gallery-large .gallery-item {
+    padding: clamp(20px, 3vw, 24px);
+  }
+
   .video-container {
     max-width: clamp(320px, 90vw, 600px);
     aspect-ratio: 16/9;
@@ -2519,6 +2674,16 @@ input[type="tel"]:focus {
   .story-gallery.bookie-gallery {
     grid-template-columns: 1fr;
     gap: clamp(12px, 2.5vw, 16px);
+  }
+
+  .story-gallery.bookie-gallery-large {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 4vw, 24px);
+    margin: clamp(20px, 4vw, 24px) auto 0;
+  }
+
+  .story-gallery.bookie-gallery-large .gallery-item {
+    padding: clamp(16px, 3vw, 20px);
   }
 
   .story-gallery .gallery-item img {
