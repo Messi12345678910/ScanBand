@@ -188,6 +188,110 @@
       </div>
     </section>
 
+    <section class="story-section">
+      <h2 class="story-title">My Story</h2>
+      
+      <div class="story-timeline">
+        <!-- Introduction Slide -->
+        <div class="story-slide" data-slide="intro">
+          <div class="story-content">
+            <div class="story-text">
+              <p>I'm Connor Owen, a 17-year-old D1 soccer player for Columbia and former San Jose Earthquakes Academy (MLS Next) player. I've always loved two things: creating and soccer.</p>
+              <p>When I was 12, I invented the <strong>Bookie Cushion</strong>, a bookmark that doubles as a whoopee cushion. I balanced the project with school and soccer. I made prototypes, had it manufactured, and eventually licensed it to Fred & Friends. It is now sold at places like Barnes & Noble and Walmart.</p>
+            </div>
+            <div class="story-gallery">
+              <div class="gallery-item">
+                <img src="attached_assets/image_1757081845987.png" alt="Bookie Cushion original design sketch">
+              </div>
+              <div class="gallery-item">
+                <img src="attached_assets/image_1757081863394.png" alt="Connor showing Bookie Cushion prototype">
+              </div>
+              <div class="gallery-item">
+                <img src="attached_assets/image_1757081878028.png" alt="Bookie Cushion manufactured product">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soccer Background Slide -->
+        <div class="story-slide" data-slide="soccer-background">
+          <div class="story-content">
+            <div class="story-text">
+              <p>When I was 12, I was a solid soccer player, but never the best player. I was on the B team at my old club.</p>
+              <p>I wanted to level up. I knew I wasn't the strongest or fastest. But I obsessed over the details — especially the mental side of the game and specifically scanning.</p>
+            </div>
+            <div class="story-visual">
+              <div class="story-highlight">
+                <h3>Things started to change.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- National Recognition Slide -->
+        <div class="story-slide" data-slide="national">
+          <div class="story-content">
+            <div class="story-text">
+              <h3>National Recognition</h3>
+              <p>I got invited to national team camps and all-star games. It was incredible.</p>
+            </div>
+            <div class="story-gallery single-image">
+              <div class="gallery-item">
+                <img src="attached_assets/image_1757081948476.png" alt="Connor at Chula Vista Elite Athlete Training Center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- College Recruitment Slide -->
+        <div class="story-slide" data-slide="college">
+          <div class="story-content">
+            <div class="story-text">
+              <h3>College Recruitment</h3>
+              <p>I was recruited by top D1 schools and committed to Columbia. Coaches consistently pointed to my field awareness and decision-making.</p>
+            </div>
+            <div class="story-gallery single-image">
+              <div class="gallery-item">
+                <img src="attached_assets/image_1757081964773.png" alt="Connor's Columbia recruitment card">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Problem Slide -->
+        <div class="story-slide" data-slide="problem">
+          <div class="story-content">
+            <div class="story-text">
+              <h3>The Problem</h3>
+              <p>As valuable as scanning was for me, it was one of the hardest things for me to improve. I noticed my teammates wanted to improve but struggled.</p>
+            </div>
+            <div class="story-visual">
+              <div class="problem-visual">
+                <div class="problem-icon">⚠️</div>
+                <p>Players struggle to develop scanning habits</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Solution Slide -->
+        <div class="story-slide" data-slide="solution">
+          <div class="story-content">
+            <div class="story-text">
+              <h3>The Idea</h3>
+              <p>That's when I realized I could combine my two passions, soccer and creating.</p>
+              <p><strong>And the ScanBand was born.</strong></p>
+            </div>
+            <div class="story-gallery single-image">
+              <div class="gallery-item">
+                <img src="attached_assets/image_1757081982062.png" alt="ScanBand prototype development">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <main class="main-sections">
       <section class="train-vision-section">
         <img src="Images/ScanBand 1.png" alt="ScanBand soccer vision training wearable device">
@@ -229,6 +333,24 @@
     section.style.transform = 'translateY(30px)';
     section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
     observer.observe(section);
+  });
+
+  // Story section animations
+  const storyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+  });
+
+  // Observe story slides
+  const storySlides = document.querySelectorAll('.story-slide');
+  storySlides.forEach(slide => {
+    storyObserver.observe(slide);
   });
 
   
