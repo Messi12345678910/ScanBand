@@ -1118,7 +1118,7 @@ nav a:hover {
 }
 
 .story-gallery.bookie-gallery {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(20px, 3vw, 28px);
   max-width: none;
   margin-top: clamp(16px, 3vw, 24px);
@@ -1193,11 +1193,14 @@ nav a:hover {
 .story-gallery.bookie-gallery .gallery-item img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  object-position: center;
   border-radius: clamp(12px, 2.5vw, 16px);
   transition: var(--transition);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
+  padding: clamp(8px, 1.5vw, 12px);
 }
 
 .story-gallery.bookie-gallery .gallery-item:hover img {
@@ -2461,7 +2464,7 @@ input[type="tel"]:focus {
   }
 
   .story-gallery.bookie-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: clamp(16px, 3vw, 20px);
   }
 
