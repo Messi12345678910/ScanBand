@@ -1,9 +1,9 @@
 /* Reset and base styles */
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  scroll-behavior: smooth; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Professional animations */
@@ -1077,10 +1077,19 @@ nav a:hover {
 }
 
 .story-text h3 {
-  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
   font-weight: 700;
-  color: var(--primary-green);
-  margin-bottom: clamp(16px, 3vw, 24px);
+  color: var(--primary-green-dark);
+  margin-bottom: clamp(16px, 3vw, 20px);
+  letter-spacing: -0.01em;
+}
+
+.story-text h4 {
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: clamp(12px, 2.5vw, 16px);
+  margin-top: clamp(8px, 2vw, 12px);
   letter-spacing: -0.01em;
 }
 
