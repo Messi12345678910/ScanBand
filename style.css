@@ -1396,6 +1396,10 @@ nav a:hover {
 
 .story-gallery.single-image .gallery-item img {
   aspect-ratio: 4/3;
+  object-fit: contain;
+  object-position: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
+  padding: clamp(8px, 1.5vw, 12px);
 }
 
 .story-visual {
