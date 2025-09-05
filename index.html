@@ -65,7 +65,7 @@
     <div class="header">
       <a href="index.html" class="logo"><span>SCAN</span><span>BAND</span></a>
       <div class="header-controls">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1_3LbjxgA9CzkRsGlgER_4Zs3qUi9UdGW2VLzMscOdoBCAA/viewform?usp=dialog" 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1_3LbjxgA9CzkRsGlgER_4Zs3qUi9UdGW2VLzMscOdoBCAA/viewform?usp=dialog"
            class="header-buy-btn" target="_blank">Buy Now</a>
         <button class="nav-toggle" id="nav-toggle">
           <span></span>
@@ -160,7 +160,7 @@
         <p>The world's best players seem to have eyes in the back of their head. They always know where teammates and opponents are. That's because they scan!</p>
         <p><strong>Scanning changes your game, giving you a mental map of the field, more time on the ball, quicker speed of play, and better decisions.</strong></p>
       </div>
-      
+
       <div class="scanning-stats">
         <div class="stat-card messi-stat">
           <div class="stat-number">5</div>
@@ -173,7 +173,7 @@
             <p>Averages 5 scans before receiving the ball.</p>
           </div>
         </div>
-        
+
         <div class="stat-card premier-league-stat">
           <div class="stat-number">2.8</div>
           <div class="stat-image-placeholder">
@@ -190,7 +190,7 @@
 
     <section class="story-section">
       <h2 class="story-title">My Story</h2>
-      
+
       <div class="story-timeline">
         <!-- Introduction Slide -->
         <div class="story-slide" data-slide="intro">
@@ -311,60 +311,6 @@
         <div class="about-text">
           <p>I'm Connor Owen, D1 soccer player at Columbia and former San Jose Earthquakes Academy player.
 
-  
-  // Intersection Observer for scroll animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-      }
-    });
-  }, observerOptions);
-
-  // Observe sections for animations
-  const sectionsToAnimate = document.querySelectorAll('.main-sections, .about-section, .users-say-section, .recruiting-section');
-  sectionsToAnimate.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-    observer.observe(section);
-  });
-
-  // Story section animations
-  const storyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-      }
-    });
-  }, {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
-  });
-
-  // Observe story slides
-  const storySlides = document.querySelectorAll('.story-slide');
-  storySlides.forEach(slide => {
-    storyObserver.observe(slide);
-  });
-
-  
-
-  // Add CSS for animation
-  const style = document.createElement('style');
-  style.textContent = `
-    .animate-in {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-  `;
-  document.head.appendChild(style);
-
 
           <br><br>
           From club to college, I've seen that players don't scan enough, and coaches don't have a reliable way to teach it.
@@ -390,7 +336,7 @@
           </video>
         </div>
         <div class="users-say-text">
-          <p>"Yeah, I really love the ScanBand! It’s super lightweight and definitely reminds you to scan and helps me look for things when I’m scanning. I overall think it’s really great in a game situation. The ScanBand is amazing!"
+          <p>"Yeah, I really love the ScanBand! It's super lightweight and definitely reminds you to scan and helps me look for things when I'm scanning. I overall think it's really great in a game situation. The ScanBand is amazing!"
           <br><br>
           <strong>- James O., Albion SC San Diego MLS Next</strong>
           </p>
@@ -540,6 +486,57 @@
           document.body.style.overflow = 'auto';
         }
       });
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe sections for animations
+      const sectionsToAnimate = document.querySelectorAll('.main-sections, .about-section, .users-say-section, .recruiting-section');
+      sectionsToAnimate.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        observer.observe(section);
+      });
+
+      // Story section animations
+      const storyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+      });
+
+      // Observe story slides
+      const storySlides = document.querySelectorAll('.story-slide');
+      storySlides.forEach(slide => {
+        storyObserver.observe(slide);
+      });
+
+      // Add CSS for animation
+      const style = document.createElement('style');
+      style.textContent = `
+        .animate-in {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+      `;
+      document.head.appendChild(style);
     });
   </script>
 </body>
