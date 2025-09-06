@@ -1277,6 +1277,68 @@ nav a:hover {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* Larger prototype gallery for better visibility */
+.story-gallery.prototype-gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(32px, 6vw, 48px);
+  margin-top: clamp(24px, 4vw, 32px);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-gallery.prototype-gallery .gallery-item {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.9) 100%);
+  border-radius: clamp(20px, 4vw, 24px);
+  padding: clamp(24px, 4vw, 32px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  transition: var(--transition);
+  overflow: visible;
+}
+
+.story-gallery.prototype-gallery .gallery-item::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: linear-gradient(45deg, var(--primary-green), var(--accent-green), var(--primary-green-light));
+  border-radius: clamp(24px, 5vw, 28px);
+  z-index: -1;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.story-gallery.prototype-gallery .gallery-item:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.story-gallery.prototype-gallery .gallery-item:hover::before {
+  opacity: 0.15;
+}
+
+.story-gallery.prototype-gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  object-position: center;
+  border-radius: clamp(16px, 3vw, 20px);
+  transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
+  padding: clamp(16px, 3vw, 20px);
+}
+
+.story-gallery.prototype-gallery .gallery-item:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
 .story-gallery.single-image {
   grid-template-columns: 1fr;
   max-width: 400px;
@@ -2778,6 +2840,11 @@ input[type="tel"]:focus {
     gap: clamp(12px, 2vw, 16px);
   }
 
+  .story-gallery.prototype-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(24px, 4vw, 32px);
+  }
+
   .story-gallery.bookie-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(16px, 3vw, 20px);
@@ -2851,6 +2918,11 @@ input[type="tel"]:focus {
   .story-gallery:not(.single-image):not(.bookie-gallery) {
     grid-template-columns: 1fr;
     gap: clamp(8px, 2vw, 12px);
+  }
+
+  .story-gallery.prototype-gallery {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 4vw, 24px);
   }
 
   .story-gallery.bookie-gallery {
