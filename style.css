@@ -1165,23 +1165,22 @@ nav a:hover {
   order: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(40px, 8vw, 64px);
-  max-width: 1000px;
-  margin: clamp(40px, 8vw, 64px) auto 0;
+  gap: clamp(32px, 6vw, 48px);
+  max-width: 900px;
+  margin: clamp(32px, 6vw, 48px) auto 0;
   padding: 0;
 }
 
 .story-gallery.manufactured-gallery-large .gallery-item {
   position: relative;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 250, 252, 0.95) 100%);
-  border-radius: clamp(24px, 5vw, 32px);
-  padding: clamp(32px, 6vw, 48px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
-  border: 2px solid rgba(226, 232, 240, 0.8);
+  border-radius: clamp(20px, 4vw, 24px);
+  padding: clamp(24px, 4vw, 32px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(226, 232, 240, 0.6);
   transition: var(--transition);
-  overflow: hidden;
-  min-height: clamp(350px, 40vw, 500px);
-  aspect-ratio: 4/3;
+  overflow: visible;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1213,12 +1212,12 @@ nav a:hover {
 .story-gallery.manufactured-gallery-large .gallery-item img {
   width: 100%;
   height: auto;
-  max-height: 100%;
+  aspect-ratio: 4/3;
   object-fit: contain;
   object-position: center;
-  border-radius: clamp(20px, 4vw, 28px);
+  border-radius: clamp(16px, 3vw, 20px);
   transition: var(--transition);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
   padding: clamp(12px, 2vw, 16px);
 }
@@ -3035,12 +3034,12 @@ input[type="tel"]:focus {
 
   .story-gallery.manufactured-gallery-large {
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(32px, 6vw, 40px);
-    margin: clamp(32px, 6vw, 40px) auto 0;
+    gap: clamp(24px, 5vw, 32px);
+    margin: clamp(24px, 5vw, 32px) auto 0;
   }
 
   .story-gallery.manufactured-gallery-large .gallery-item {
-    padding: clamp(24px, 5vw, 32px);
+    padding: clamp(20px, 4vw, 24px);
   }
 
   .video-container {
@@ -3135,12 +3134,12 @@ input[type="tel"]:focus {
 
   .story-gallery.manufactured-gallery-large {
     grid-template-columns: 1fr;
-    gap: clamp(24px, 5vw, 32px);
-    margin: clamp(24px, 5vw, 32px) auto 0;
+    gap: clamp(20px, 4vw, 24px);
+    margin: clamp(20px, 4vw, 24px) auto 0;
   }
 
   .story-gallery.manufactured-gallery-large .gallery-item {
-    padding: clamp(20px, 4vw, 24px);
+    padding: clamp(16px, 3vw, 20px);
   }
 
   .story-gallery .gallery-item img {
