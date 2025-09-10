@@ -1030,6 +1030,16 @@ nav a:hover {
   max-width: 400px;
 }
 
+.video-placeholder-container.large-videos {
+  max-width: 1000px;
+  gap: clamp(32px, 6vw, 48px);
+  margin: clamp(32px, 6vw, 48px) auto 0;
+}
+
+.video-placeholder-container.large-videos.single-video {
+  max-width: 500px;
+}
+
 .video-placeholder {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.9) 100%);
   border-radius: clamp(12px, 2.5vw, 16px);
@@ -1044,6 +1054,23 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.video-placeholder-container.large-videos .video-placeholder {
+  border-radius: clamp(16px, 3vw, 20px);
+  padding: clamp(32px, 6vw, 48px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  border: 3px dashed rgba(27, 94, 32, 0.4);
+  min-height: clamp(200px, 25vw, 280px);
+}
+
+.video-placeholder-container.large-videos .video-placeholder p {
+  font-size: clamp(1.3rem, 2.8vw, 1.6rem);
+  font-weight: 700;
+}
+
+.video-placeholder-container.large-videos .video-placeholder span {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
 }
 
 .video-placeholder:hover {
