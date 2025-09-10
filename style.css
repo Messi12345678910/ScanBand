@@ -1073,6 +1073,13 @@ nav a:hover {
   font-size: clamp(1rem, 2.2vw, 1.2rem);
 }
 
+.video-placeholder-container.large-videos .video-container {
+  border-radius: clamp(16px, 3vw, 20px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  min-height: clamp(200px, 25vw, 280px);
+  aspect-ratio: 16/9;
+}
+
 .video-placeholder:hover {
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
