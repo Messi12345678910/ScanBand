@@ -10,7 +10,7 @@ publicDir = "/"
 deploymentTarget = "static"
 
 [workflows]
-runButton = "Project"
+runButton = "Start Website"
 
 [[workflows.workflow]]
 name = "Serve static"
@@ -46,6 +46,15 @@ waitForPort = 5000
 [workflows.workflow.metadata]
 outputType = "webview"
 
+[[workflows.workflow]]
+name = "Start Website"
+author = 23461403
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m http.server 5000"
+
 [[ports]]
 localPort = 80
 externalPort = 80
@@ -57,10 +66,6 @@ externalPort = 80
 [[ports]]
 localPort = 37129
 externalPort = 3000
-
-[[ports]]
-localPort = 46241
-externalPort = 3001
 
 [agent]
 expertMode = true
