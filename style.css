@@ -2376,6 +2376,7 @@ img:hover {
 .users-say-content .video-container {
   width: clamp(200px, 25vw, 320px);
   height: clamp(280px, 30vw, 420px);
+  object-fit: cover;
   border-radius: clamp(16px, 3vw, 20px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
