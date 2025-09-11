@@ -3305,8 +3305,8 @@ img {
   border: none;
   box-shadow: none;
   padding: 0;
-  border-radius: clamp(16px, 3vw, 20px);
-  overflow: hidden;
+  border-radius: 0;
+  overflow: visible;
 }
 
 .story-slide.side-by-side-layout .story-gallery .gallery-item::before {
@@ -3321,6 +3321,9 @@ img {
   border-radius: clamp(16px, 3vw, 20px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: var(--transition);
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .story-slide.side-by-side-layout .story-gallery .gallery-item:hover img {
