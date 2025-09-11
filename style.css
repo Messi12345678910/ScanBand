@@ -1869,12 +1869,30 @@ nav a:hover {
   margin-right: 0;
 }
 
+/* Default order - images first, then text */
 .story-slide .story-text {
-  order: 1;
+  order: 2;
 }
 
 .story-slide .story-gallery,
 .story-slide .story-visual {
+  order: 1;
+}
+
+/* Special ordering for manufactured sections - text first, then images */
+.story-slide[data-slide="manufactured"] .story-text {
+  order: 1;
+}
+
+.story-slide[data-slide="manufactured"] .story-gallery {
+  order: 2;
+}
+
+.story-slide[data-slide="final-product"] .story-text {
+  order: 1;
+}
+
+.story-slide[data-slide="final-product"] .story-gallery {
   order: 2;
 }
 
