@@ -3242,18 +3242,84 @@ input:focus {
   display: block;
 }
 
+/* Add rounded edges to all images */
+img {
+  border-radius: clamp(8px, 2vw, 12px);
+}
+
+.gallery-item img {
+  border-radius: clamp(8px, 2vw, 12px);
+}
+
+.story-gallery .gallery-item img {
+  border-radius: clamp(8px, 2vw, 12px);
+}
+
+/* Fix intro section image - make bigger with rounded edges */
+.story-slide[data-slide="intro"] .story-gallery.single-image .gallery-item img {
+  width: clamp(280px, 35vw, 400px);
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: clamp(12px, 2.5vw, 16px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Fix Casper and Premier League images to fill containers properly */
+.effective-image img,
+.stat-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: clamp(12px, 2.5vw, 16px);
+}
+
+/* Side-by-side layout for national recognition and college recruitment */
+.story-slide.side-by-side-layout .story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 48px);
+  align-items: center;
+  text-align: left;
+}
+
+.story-slide.side-by-side-layout .story-text {
+  order: 1;
+}
+
+.story-slide.side-by-side-layout .story-gallery {
+  order: 2;
+}
+
+/* Text above image layout for product development sections */
+.story-slide.text-above-image .story-text {
+  order: 1;
+}
+
+.story-slide.text-above-image .story-gallery,
+.story-slide.text-above-image .video-placeholder-container {
+  order: 2;
+}
+
+/* Center manufactured product images under text */
+.story-slide[data-slide="manufactured"] .story-gallery.manufactured-gallery-large,
+.story-slide[data-slide="final-product"] .story-gallery.manufactured-gallery-large {
+  justify-self: center;
+  margin: clamp(32px, 6vw, 48px) auto 0;
+}
+
 /* Manufactured Product gallery sizing */
 .story-gallery.manufactured-gallery-large .gallery-item {
-  padding: 0;               /* keep white frame gone */
+  padding: 0;
   overflow: hidden;
-  width: clamp(240px, 30vw, 360px);   /* << make each card wider */
-  height: clamp(240px, 30vw, 360px);  /* << optional: make square */
-  border-radius: 24px;
+  width: clamp(240px, 30vw, 360px);
+  height: clamp(240px, 30vw, 360px);
+  border-radius: clamp(16px, 3vw, 20px);
 }
 
 .story-gallery.manufactured-gallery-large .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* fill the square nicely */
-  border-radius: inherit;
+  object-fit: cover;
+  border-radius: clamp(16px, 3vw, 20px);
 }
