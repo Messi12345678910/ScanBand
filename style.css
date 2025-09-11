@@ -1145,13 +1145,13 @@ nav a:hover {
 .final-product-gallery .gallery-item img {
   width: 100%;
   height: auto;
-  min-height: 200px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   border-radius: clamp(16px, 3vw, 20px);
   transition: var(--transition);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
+  aspect-ratio: 4/3;
 }
 
 .final-product-gallery .gallery-item:hover img {
@@ -1207,13 +1207,13 @@ nav a:hover {
 .story-gallery.manufactured-gallery-large .gallery-item img {
   width: 100%;
   height: auto;
-  min-height: 250px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   border-radius: clamp(20px, 4vw, 28px);
   transition: var(--transition);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
+  aspect-ratio: 4/3;
 }
 
 .story-gallery.manufactured-gallery-large .gallery-item:hover img {
