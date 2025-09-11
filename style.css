@@ -3277,7 +3277,7 @@ img {
   height: auto;
   aspect-ratio: 3/4;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: clamp(16px, 3vw, 20px);
   box-shadow: none;
   border: none;
 }
