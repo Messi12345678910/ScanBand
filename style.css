@@ -3264,8 +3264,9 @@ img {
   height: auto;
   aspect-ratio: 3/4;
   object-fit: cover;
-  border-radius: clamp(16px, 3vw, 20px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
 }
 
 /* Fix Casper and Premier League images to fill containers properly */
