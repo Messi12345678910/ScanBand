@@ -1162,12 +1162,13 @@ nav a:hover {
 /* Large manufactured product gallery */
 .story-gallery.manufactured-gallery-large {
   order: 2;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
   gap: clamp(24px, 5vw, 40px);
   max-width: 1000px;
   margin: clamp(32px, 6vw, 48px) auto 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .story-gallery.manufactured-gallery-large .gallery-item {
@@ -3244,29 +3245,35 @@ input:focus {
 
 /* Add rounded edges to all images */
 img {
-  border-radius: clamp(8px, 2vw, 12px);
+  border-radius: clamp(12px, 2.5vw, 16px);
 }
 
 .gallery-item img {
-  border-radius: clamp(8px, 2vw, 12px);
+  border-radius: clamp(12px, 2.5vw, 16px);
 }
 
 .story-gallery .gallery-item img {
-  border-radius: clamp(8px, 2vw, 12px);
+  border-radius: clamp(12px, 2.5vw, 16px);
 }
 
 /* Fix intro section image - make bigger with rounded edges */
 .story-slide[data-slide="intro"] .story-gallery.single-image .gallery-item img {
-  width: clamp(280px, 35vw, 400px);
+  width: clamp(320px, 40vw, 450px);
   height: auto;
   aspect-ratio: 3/4;
   object-fit: cover;
-  border-radius: clamp(12px, 2.5vw, 16px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: clamp(16px, 3vw, 20px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Fix Casper and Premier League images to fill containers properly */
-.effective-image img,
+.effective-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: clamp(16px, 3vw, 20px);
+}
+
 .stat-image-placeholder img {
   width: 100%;
   height: 100%;
@@ -3277,7 +3284,7 @@ img {
 /* Side-by-side layout for national recognition and college recruitment */
 .story-slide.side-by-side-layout .story-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   gap: clamp(32px, 6vw, 48px);
   align-items: center;
   text-align: left;
@@ -3285,20 +3292,42 @@ img {
 
 .story-slide.side-by-side-layout .story-text {
   order: 1;
+  text-align: left;
 }
 
 .story-slide.side-by-side-layout .story-gallery {
   order: 2;
+  width: clamp(200px, 25vw, 280px);
+}
+
+.story-slide.side-by-side-layout .story-gallery .gallery-item img {
+  width: clamp(200px, 25vw, 280px);
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: clamp(16px, 3vw, 20px);
 }
 
 /* Text above image layout for product development sections */
+.story-slide.text-above-image .story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .story-slide.text-above-image .story-text {
   order: 1;
+  text-align: center;
 }
 
 .story-slide.text-above-image .story-gallery,
 .story-slide.text-above-image .video-placeholder-container {
   order: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(24px, 4vw, 32px);
 }
 
 /* Center manufactured product images under text */
@@ -3306,6 +3335,17 @@ img {
 .story-slide[data-slide="final-product"] .story-gallery.manufactured-gallery-large {
   justify-self: center;
   margin: clamp(32px, 6vw, 48px) auto 0;
+  display: flex;
+  justify-content: center;
+  gap: clamp(24px, 5vw, 40px);
+}
+
+.story-slide[data-slide="manufactured"] .story-content,
+.story-slide[data-slide="final-product"] .story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Manufactured Product gallery sizing */
