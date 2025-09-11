@@ -56,16 +56,8 @@ task = "shell.exec"
 args = "python -m http.server 5000"
 
 [[ports]]
-localPort = 80
-externalPort = 80
-
-[[ports]]
 localPort = 5000
 externalPort = 80
-
-[[ports]]
-localPort = 37129
-externalPort = 3000
 
 [agent]
 expertMode = true
