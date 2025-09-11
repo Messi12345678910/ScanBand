@@ -1144,7 +1144,8 @@ nav a:hover {
 
 .final-product-gallery .gallery-item img {
   width: 100%;
-  height: clamp(250px, 30vw, 350px);
+  height: auto;
+  aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center;
   border-radius: clamp(16px, 3vw, 20px);
@@ -1204,7 +1205,8 @@ nav a:hover {
 
 .story-gallery.manufactured-gallery-large .gallery-item img {
   width: 100%;
-  height: clamp(300px, 35vw, 450px);
+  height: auto;
+  aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center;
   border-radius: clamp(20px, 4vw, 28px);
