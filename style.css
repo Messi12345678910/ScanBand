@@ -1144,8 +1144,8 @@ nav a:hover {
 
 .final-product-gallery .gallery-item img {
   width: 100%;
-  height: clamp(300px, 35vw, 450px);
-  object-fit: contain;
+  height: auto;
+  object-fit: cover;
   object-position: center;
   border-radius: clamp(16px, 3vw, 20px);
   transition: var(--transition);
@@ -3044,25 +3044,16 @@ input[type="tel"]:focus {
     aspect-ratio: 16/9;
   }
 
-  /* Product development mobile */
+  /* Product development responsive */
   .video-placeholder-container {
     grid-template-columns: 1fr;
     gap: clamp(16px, 3vw, 24px);
-  }
-
-  .video-placeholder {
-    padding: clamp(16px, 3vw, 20px);
-    aspect-ratio: 16/9;
   }
 
   .final-product-gallery {
     grid-template-columns: 1fr;
     gap: clamp(24px, 4vw, 32px);
     margin: clamp(24px, 4vw, 32px) auto 0;
-  }
-
-  .final-product-gallery .gallery-item {
-    padding: clamp(16px, 3vw, 20px);
   }
 }
 
