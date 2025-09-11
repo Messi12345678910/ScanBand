@@ -1297,8 +1297,8 @@ nav a:hover {
 }
 
 .story-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: clamp(32px, 6vw, 48px);
   align-items: center;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.9) 100%);
@@ -1331,6 +1331,9 @@ nav a:hover {
 
 .story-text {
   order: 1;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .story-text h3 {
@@ -1371,6 +1374,8 @@ nav a:hover {
   order: 2;
   display: grid;
   gap: clamp(16px, 3vw, 24px);
+  width: 100%;
+  justify-content: center;
 }
 
 .story-gallery:not(.single-image):not(.bookie-gallery) {
@@ -1858,24 +1863,19 @@ nav a:hover {
   text-align: center;
 }
 
-/* Alternating layout */
-.story-slide:nth-child(even) .story-content {
+/* Consistent layout for all story slides */
+.story-slide .story-content {
   margin-left: 0;
   margin-right: 0;
 }
 
-.story-slide:nth-child(even) .story-text {
-  order: 2;
-}
-
-.story-slide:nth-child(even) .story-gallery,
-.story-slide:nth-child(even) .story-visual {
+.story-slide .story-text {
   order: 1;
 }
 
-.story-slide:nth-child(odd) .story-content {
-  margin-left: 0;
-  margin-right: 0;
+.story-slide .story-gallery,
+.story-slide .story-visual {
+  order: 2;
 }
 
 /* Main sections layout */
