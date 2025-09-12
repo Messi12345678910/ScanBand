@@ -89,6 +89,8 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Container and Layout */
@@ -97,6 +99,7 @@ body {
   margin: 0 auto;
   padding: clamp(80px, 12vw, 120px) clamp(16px, 4vw, 32px) 0;
   min-height: 100vh;
+  touch-action: pan-y pinch-zoom;
 }
 
 /* Header */
@@ -2866,6 +2869,13 @@ input[type="tel"]:focus {
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 90px !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y pinch-zoom !important;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y pinch-zoom !important;
   }
 
   .container {
@@ -2873,6 +2883,7 @@ input[type="tel"]:focus {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
+    touch-action: pan-y pinch-zoom !important;
   }
 
   .header {
@@ -3161,6 +3172,13 @@ input[type="tel"]:focus {
 @media (max-width: 480px) {
   html {
     scroll-padding-top: 100px !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y pinch-zoom !important;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y pinch-zoom !important;
   }
 
   .container {
@@ -3168,6 +3186,7 @@ input[type="tel"]:focus {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
+    touch-action: pan-y pinch-zoom !important;
   }
 
   /* Force all side-by-side layouts to stack on small screens */
