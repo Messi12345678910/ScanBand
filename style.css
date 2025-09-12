@@ -2865,13 +2865,14 @@ input[type="tel"]:focus {
 
 @media (max-width: 768px) {
   html {
-    scroll-padding-top: 80px;
+    scroll-padding-top: 90px !important;
   }
 
   .container {
-    padding: 80px clamp(16px, 4vw, 24px) 0 !important;
-    width: 100%;
-    max-width: 100%;
+    padding: 90px clamp(12px, 3vw, 20px) 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
 
   .header {
@@ -2967,21 +2968,22 @@ input[type="tel"]:focus {
   }
 
   .effective-content {
-    flex-direction: column;
-    text-align: center;
-    gap: clamp(24px, 4vw, 32px);
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: clamp(24px, 4vw, 32px) !important;
   }
 
   .effective-image {
-    width: clamp(200px, 50vw, 280px);
-    height: clamp(280px, 35vw, 350px);
-    aspect-ratio: 3/4;
+    width: clamp(200px, 60vw, 300px) !important;
+    height: clamp(260px, 40vw, 380px) !important;
+    aspect-ratio: 3/4 !important;
+    margin: 0 auto !important;
   }
   
   .effective-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 
   .effective-text {
@@ -2990,8 +2992,9 @@ input[type="tel"]:focus {
   }
 
   .simple-gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(12px, 2vw, 16px);
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: clamp(12px, 3vw, 18px) !important;
+    max-width: 100% !important;
   }
 
   .users-say-text {
@@ -3157,14 +3160,43 @@ input[type="tel"]:focus {
 
 @media (max-width: 480px) {
   html {
-    scroll-padding-top: 90px;
+    scroll-padding-top: 100px !important;
   }
 
   .container {
-    padding: 90px clamp(8px, 2vw, 12px) 0;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    padding: 100px clamp(8px, 2vw, 12px) 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Force all side-by-side layouts to stack on small screens */
+  .story-slide.side-by-side-layout .story-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: clamp(20px, 4vw, 28px) !important;
+    grid-template-columns: none !important;
+  }
+
+  .story-slide.side-by-side-layout .story-text {
+    order: 1 !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .story-slide.side-by-side-layout .story-gallery {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: clamp(250px, 70vw, 350px) !important;
+  }
+
+  .story-slide.side-by-side-layout .story-gallery .gallery-item img {
+    width: 100% !important;
+    max-width: clamp(250px, 70vw, 350px) !important;
+    height: auto !important;
   }
 
   .header {
@@ -3345,8 +3377,29 @@ input[type="tel"]:focus {
   }
 
   .simple-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: clamp(8px, 2vw, 12px);
+    grid-template-columns: 1fr !important;
+    gap: clamp(12px, 3vw, 16px) !important;
+    max-width: clamp(280px, 80vw, 400px) !important;
+    margin: 0 auto !important;
+  }
+
+  /* Ensure all images are properly sized on mobile */
+  .gallery-item img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Fix stat cards on mobile */
+  .stat-image-placeholder {
+    height: clamp(140px, 25vw, 200px) !important;
+  }
+
+  /* Better mobile spacing for all sections */
+  .story-content {
+    margin-left: clamp(4px, 1vw, 8px) !important;
+    margin-right: clamp(4px, 1vw, 8px) !important;
+    padding: clamp(16px, 3vw, 24px) !important;
   }
 
   .scanning-stats {
@@ -3596,26 +3649,28 @@ img {
 /* Mobile responsiveness for side-by-side layouts */
 @media (max-width: 768px) {
   .story-slide.side-by-side-layout .story-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: clamp(24px, 4vw, 32px);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: clamp(24px, 4vw, 32px) !important;
+    grid-template-columns: none !important;
   }
   
   .story-slide.side-by-side-layout .story-text {
-    order: 1;
-    text-align: center;
-    width: 100%;
+    order: 1 !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .story-slide.side-by-side-layout .story-gallery {
-    order: 2;
-    width: clamp(200px, 50vw, 280px);
+    order: 2 !important;
+    width: clamp(200px, 60vw, 300px) !important;
   }
   
   .story-slide.side-by-side-layout .story-gallery .gallery-item img {
-    width: clamp(200px, 50vw, 280px);
+    width: clamp(200px, 60vw, 300px) !important;
+    max-width: 100% !important;
   }
 }
 
