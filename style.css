@@ -533,11 +533,12 @@ nav a:hover {
 
 .simple-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(24px, 4vw, 32px);
   width: 100%;
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .simple-gallery .gallery-item {
