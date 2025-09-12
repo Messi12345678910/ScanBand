@@ -2856,6 +2856,11 @@ input[type="tel"]:focus {
   .about-text {
     min-width: 280px;
   }
+
+  .video-container {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2864,7 +2869,9 @@ input[type="tel"]:focus {
   }
 
   .container {
-    padding: 80px clamp(16px, 4vw, 32px) 0 !important;
+    padding: 80px clamp(16px, 4vw, 24px) 0 !important;
+    width: 100%;
+    max-width: 100%;
   }
 
   .header {
@@ -2872,6 +2879,7 @@ input[type="tel"]:focus {
     justify-content: space-between;
     gap: 16px;
     padding: 16px 20px;
+    width: 100%;
   }
 
   .desktop-nav {
@@ -2880,6 +2888,8 @@ input[type="tel"]:focus {
 
   .header-controls {
     display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   .nav-toggle {
@@ -2888,20 +2898,34 @@ input[type="tel"]:focus {
 
   .header-buy-btn {
     display: inline-flex;
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 
   .main-header {
     margin-bottom: clamp(24px, 5vw, 32px);
+    padding: 0 clamp(8px, 2vw, 16px);
   }
 
   .main-header h1 {
     font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+    line-height: 1.1;
+  }
+
+  .main-header h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    padding: 0 clamp(8px, 2vw, 16px);
   }
 
   .main-header .features {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: clamp(12px, 2.5vw, 16px);
     padding: clamp(16px, 3vw, 20px);
+    margin: 0 clamp(8px, 2vw, 16px);
+  }
+
+  .main-header .features-wrapper {
+    margin: 0 clamp(8px, 2vw, 16px);
   }
 
   .main-header .features-wrapper::before {
@@ -2910,6 +2934,7 @@ input[type="tel"]:focus {
 
   .main-sections {
     gap: clamp(40px, 8vw, 56px);
+    padding: 0 clamp(8px, 2vw, 16px);
   }
 
   .about-content {
@@ -2996,6 +3021,7 @@ input[type="tel"]:focus {
 
   .stat-card {
     padding: clamp(24px, 5vw, 32px);
+    margin: 0 clamp(8px, 2vw, 16px);
   }
 
   .stat-image-placeholder {
@@ -3005,8 +3031,8 @@ input[type="tel"]:focus {
   .story-content {
     grid-template-columns: 1fr;
     gap: clamp(24px, 4vw, 32px);
-    margin-left: clamp(16px, 3vw, 24px) !important;
-    margin-right: clamp(16px, 3vw, 24px) !important;
+    margin-left: clamp(8px, 2vw, 16px) !important;
+    margin-right: clamp(8px, 2vw, 16px) !important;
   }
 
   .story-text {
@@ -3061,7 +3087,7 @@ input[type="tel"]:focus {
   }
 
   .story-gallery.manufactured-gallery-large .gallery-item {
-    padding: clamp(16px, 3vw, 20px);
+    padding: clamp(8px, 2vw, 12px);
     aspect-ratio: 1;
   }
 
@@ -3072,12 +3098,14 @@ input[type="tel"]:focus {
   .video-container {
     max-width: clamp(320px, 90vw, 600px);
     aspect-ratio: 16/9;
+    margin: 0 auto;
   }
 
   /* Product development mobile */
   .video-placeholder-container {
     grid-template-columns: 1fr;
     gap: clamp(16px, 3vw, 24px);
+    margin: 0 clamp(8px, 2vw, 16px);
   }
 
   .video-placeholder {
@@ -3094,43 +3122,106 @@ input[type="tel"]:focus {
   .final-product-gallery .gallery-item {
     padding: clamp(16px, 3vw, 20px);
   }
+
+  .modal-content {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .modal-body {
+    padding: clamp(16px, 3vw, 20px);
+  }
+
+  .form-wrapper {
+    padding: clamp(20px, 4vw, 32px);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    padding: clamp(10px, 2vw, 14px);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+
+  .btn {
+    padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 32px);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
 }
 
 @media (max-width: 480px) {
   html {
-    scroll-padding-top: clamp(300px, 40vw, 360px);
+    scroll-padding-top: 90px;
   }
 
   .container {
-    padding: clamp(320px, 45vw, 380px) clamp(12px, 3vw, 16px) 0;
+    padding: 90px clamp(8px, 2vw, 12px) 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .header {
-    gap: clamp(16px, 4vw, 20px);
+    gap: clamp(8px, 2vw, 12px);
+    padding: 12px 16px;
   }
 
-  nav {
-    flex-direction: column;
-    gap: clamp(8px, 2vw, 12px);
+  .header-buy-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .main-header {
+    padding: 0 clamp(4px, 1vw, 8px);
+  }
+
+  .main-header h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.1;
+  }
+
+  .main-header h2 {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    padding: 0 clamp(4px, 1vw, 8px);
+  }
+
+  .main-header .features {
+    grid-template-columns: 1fr;
+    gap: clamp(10px, 2vw, 14px);
+    padding: clamp(12px, 2.5vw, 16px);
+    margin: 0 clamp(4px, 1vw, 8px);
+  }
+
+  .main-header .features li {
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    padding: clamp(10px, 2vw, 14px);
   }
 
   .main-sections {
-    gap: clamp(32px, 8vw, 48px);
+    gap: clamp(24px, 6vw, 36px);
+    padding: 0 clamp(4px, 1vw, 8px);
   }
 
   .features {
     max-width: 100%;
   }
 
-  .about-text {
-    padding: clamp(16px, 4vw, 20px);
-    font-size: clamp(0.9rem, 2vw, 1rem);
+  .about-text,
+  .effective-text,
+  .users-say-text,
+  .recruiting-text {
+    padding: clamp(12px, 3vw, 16px);
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
   }
 
   .story-content {
-    margin-left: clamp(12px, 3vw, 16px) !important;
-    margin-right: clamp(12px, 3vw, 16px) !important;
-    padding: clamp(20px, 4vw, 24px);
+    margin-left: clamp(4px, 1vw, 8px) !important;
+    margin-right: clamp(4px, 1vw, 8px) !important;
+    padding: clamp(16px, 3vw, 20px);
   }
 
   .story-gallery:not(.single-image):not(.bookie-gallery) {
@@ -3140,73 +3231,222 @@ input[type="tel"]:focus {
 
   .story-gallery.prototype-gallery {
     grid-template-columns: 1fr;
-    gap: clamp(20px, 4vw, 24px);
+    gap: clamp(16px, 3vw, 20px);
   }
 
   .story-gallery.prototype-gallery-large {
-    grid-template-columns: 1fr;
-    gap: clamp(24px, 5vw, 32px);
-    margin: clamp(24px, 5vw, 32px) auto 0;
-  }
-
-  .story-gallery.prototype-gallery-large .gallery-item {
-    padding: clamp(20px, 4vw, 24px);
-  }
-
-  .story-gallery.bookie-gallery {
-    grid-template-columns: 1fr;
-    gap: clamp(12px, 2.5vw, 16px);
-  }
-
-  .story-gallery.bookie-gallery-large {
     grid-template-columns: 1fr;
     gap: clamp(20px, 4vw, 24px);
     margin: clamp(20px, 4vw, 24px) auto 0;
   }
 
-  .story-gallery.bookie-gallery-large .gallery-item {
+  .story-gallery.prototype-gallery-large .gallery-item {
     padding: clamp(16px, 3vw, 20px);
+  }
+
+  .story-gallery.bookie-gallery {
+    grid-template-columns: 1fr;
+    gap: clamp(10px, 2vw, 14px);
+  }
+
+  .story-gallery.bookie-gallery-large {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 3vw, 20px);
+    margin: clamp(16px, 3vw, 20px) auto 0;
+  }
+
+  .story-gallery.bookie-gallery-large .gallery-item {
+    padding: clamp(12px, 2.5vw, 16px);
   }
 
   .story-gallery.manufactured-gallery-large {
     grid-template-columns: 1fr;
-    gap: clamp(16px, 3vw, 20px);
-    margin: clamp(20px, 3vw, 24px) auto 0;
-    max-width: 320px;
+    gap: clamp(12px, 2.5vw, 16px);
+    margin: clamp(16px, 3vw, 20px) auto 0;
+    max-width: 100%;
   }
 
   .story-gallery.manufactured-gallery-large .gallery-item {
-    padding: clamp(16px, 3vw, 20px);
+    padding: clamp(8px, 2vw, 12px);
     aspect-ratio: 1;
   }
 
   .story-gallery.manufactured-gallery-large .gallery-item img {
-    max-height: 200px;
+    max-height: 180px;
   }
 
   .story-gallery .gallery-item img {
     aspect-ratio: 4/3;
   }
 
+  .video-container {
+    max-width: 100%;
+    margin: 0 clamp(4px, 1vw, 8px);
+  }
+
   /* Product development mobile */
   .video-placeholder-container {
     grid-template-columns: 1fr;
-    gap: clamp(12px, 2.5vw, 16px);
+    gap: clamp(8px, 2vw, 12px);
+    margin: 0 clamp(4px, 1vw, 8px);
   }
 
   .video-placeholder {
-    padding: clamp(16px, 3vw, 20px);
+    padding: clamp(12px, 2.5vw, 16px);
     aspect-ratio: 16/9;
   }
 
   .final-product-gallery {
     grid-template-columns: 1fr;
-    gap: clamp(16px, 3vw, 20px);
-    margin: clamp(16px, 3vw, 20px) auto 0;
+    gap: clamp(12px, 2.5vw, 16px);
+    margin: clamp(12px, 2.5vw, 16px) auto 0;
   }
 
   .final-product-gallery .gallery-item {
+    padding: clamp(12px, 2.5vw, 16px);
+  }
+
+  .modal-content {
+    width: 98%;
+    margin: 1%;
+  }
+
+  .modal-body {
+    padding: clamp(12px, 2.5vw, 16px);
+  }
+
+  .form-wrapper {
     padding: clamp(16px, 3vw, 20px);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    padding: clamp(8px, 2vw, 12px);
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  }
+
+  .btn,
+  .modal-btn,
+  .recruiting-btn {
+    padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 28px);
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  }
+
+  .stat-card {
+    margin: 0 clamp(4px, 1vw, 8px);
+    padding: clamp(16px, 3vw, 20px);
+  }
+
+  .simple-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(8px, 2vw, 12px);
+  }
+
+  .scanning-stats {
+    margin: 0 clamp(4px, 1vw, 8px);
+  }
+
+  /* Ensure all sections have proper mobile padding */
+  .simple-section,
+  .effective-section,
+  .game-changing-section,
+  .story-section,
+  .product-development-section,
+  .about-section,
+  .users-say-section,
+  .recruiting-section {
+    margin-left: clamp(4px, 1vw, 8px);
+    margin-right: clamp(4px, 1vw, 8px);
+    padding: clamp(24px, 5vw, 32px) clamp(12px, 2.5vw, 16px);
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 360px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  .header-buy-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .logo {
+    font-size: 0.95rem;
+  }
+
+  .main-header h1 {
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+  }
+
+  .main-header h2 {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
+
+  .main-header .features li {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .story-content {
+    padding: 12px;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+  }
+
+  .simple-section,
+  .effective-section,
+  .game-changing-section,
+  .story-section,
+  .product-development-section,
+  .about-section,
+  .users-say-section,
+  .recruiting-section {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 20px 8px;
+  }
+
+  .video-container {
+    margin: 0 2px;
+  }
+
+  .simple-gallery {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .modal-content {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .btn,
+  .modal-btn,
+  .recruiting-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Very wide screens */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .video-container {
+    max-width: 900px;
   }
 }
 
