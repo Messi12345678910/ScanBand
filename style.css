@@ -2773,6 +2773,31 @@ img:hover {
   font-weight: 500;
 }
 
+#waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 3vw, 20px);
+}
+
+#waitlist-email-input {
+  width: 100%;
+  padding: clamp(14px, 2.5vw, 18px) clamp(16px, 3vw, 20px);
+  border: 2px solid var(--primary-green);
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-family: inherit;
+  transition: var(--transition);
+  background: var(--bg-white);
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
+}
+
+#waitlist-email-input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.15);
+}
+
 #email-form {
   display: flex;
   flex-direction: column;
