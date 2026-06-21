@@ -531,10 +531,12 @@
           headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
         }).then(response => {
           if (response.ok) {
-            document.getElementById('waitlist-modal-body').innerHTML = `
-              <p style="text-align: center; font-weight: 600; color: var(--primary-green); font-size: 1.1rem; margin: 0;">
-                You're on the list! We'll email you as soon as the ScanBand is available.
-              </p>
+            document.querySelector('#waitlist-modal .modal-content').innerHTML = `
+              <div style="padding: clamp(32px, 6vw, 48px); text-align: center;">
+                <p style="font-weight: 600; color: var(--primary-green); font-size: 1.15rem; margin: 0;">
+                  You're on the list! We'll email you as soon as the ScanBand is available.
+                </p>
+              </div>
             `;
           } else {
             alert('Something went wrong. Please try again.');
