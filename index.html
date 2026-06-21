@@ -65,8 +65,7 @@
     <div class="header">
       <a href="index.html" class="logo"><span>SCAN</span><span>BAND</span></a>
       <div class="header-controls">
-        <a href="https://www.kickstarter.com/projects/1180091565/scanband-the-first-soccer-wearable-that-trains-field-vision"
-           class="header-buy-btn" target="_blank">Get Yours</a>
+        <button class="header-buy-btn" id="waitlist-btn-header" onclick="openWaitlistModal()">Get Yours</button>
         <button class="nav-toggle" id="nav-toggle">
           <span></span>
           <span></span>
@@ -80,9 +79,7 @@
         <a href="#recruiting">Recruiting Resources</a>
       </nav>
       <nav class="desktop-nav">
-        <a
-          href="https://www.kickstarter.com/projects/1180091565/scanband-the-first-soccer-wearable-that-trains-field-vision" target="_blank">Get
-          Yours</a>
+        <button class="desktop-nav-get-yours" onclick="openWaitlistModal()">Get Yours</button>
         <a href="#simple">Simple</a>
         <a href="#game-changing">Game-Changing</a>
         <a href="#about">About the Inventor</a>
@@ -106,8 +103,7 @@
           <li>Like a coach on your head reminding you to scan until it becomes instinct</li>
         </ul>
       </div>
-      <a href="https://www.kickstarter.com/projects/1180091565/scanband-the-first-soccer-wearable-that-trains-field-vision"
-        class="btn" target="_blank">Get Yours</a>
+      <button class="btn" onclick="openWaitlistModal()">Get Yours</button>
     </header>
 
     <section class="simple-section" id="simple">
@@ -399,6 +395,22 @@
       </div>
     </section>
 
+    <!-- Waitlist Modal -->
+    <div id="waitlist-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>ScanBand is currently sold out.</h3>
+          <button class="close-btn" onclick="closeWaitlistModal()">&times;</button>
+        </div>
+        <div class="modal-body" id="waitlist-modal-body">
+          <form id="waitlist-form">
+            <input type="email" id="waitlist-email-input" placeholder="Enter your email address" required>
+            <button type="submit" class="modal-btn">Join Waitlist</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Email Collection Modal -->
     <div id="email-modal" class="modal-overlay">
       <div class="modal-content">
@@ -490,6 +502,44 @@
             alert('Something went wrong. Please try again.');
           }
         }).catch(error => {
+          alert('Something went wrong. Please try again.');
+        });
+      });
+
+      // Waitlist modal
+      function openWaitlistModal() {
+        document.getElementById('waitlist-modal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeWaitlistModal() {
+        document.getElementById('waitlist-modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      document.getElementById('waitlist-modal').addEventListener('click', function(e) {
+        if (e.target === this) closeWaitlistModal();
+      });
+
+      document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('waitlist-email-input').value;
+
+        fetch('https://formspree.io/f/mzzvegnj', {
+          method: 'POST',
+          body: JSON.stringify({ email: email, _subject: 'ScanBand Waitlist Signup' }),
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            document.getElementById('waitlist-modal-body').innerHTML = `
+              <p style="text-align: center; font-weight: 600; color: var(--primary-green); font-size: 1.1rem; margin: 0;">
+                You're on the list! We'll email you as soon as the ScanBand is available.
+              </p>
+            `;
+          } else {
+            alert('Something went wrong. Please try again.');
+          }
+        }).catch(() => {
           alert('Something went wrong. Please try again.');
         });
       });

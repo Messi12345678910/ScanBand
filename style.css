@@ -193,6 +193,27 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
+.desktop-nav-get-yours {
+  text-decoration: none;
+  color: var(--text-gray);
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 20px);
+  border-radius: 8px;
+  transition: var(--transition);
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.desktop-nav-get-yours:hover {
+  background-color: var(--bg-light);
+  color: var(--primary-green);
+  transform: translateY(-1px);
+}
+
 /* Mobile navigation toggle */
 .nav-toggle {
   display: none;
