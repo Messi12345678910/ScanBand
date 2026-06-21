@@ -532,8 +532,9 @@
         }).then(response => {
           if (response.ok) {
             document.querySelector('#waitlist-modal .modal-content').innerHTML = `
-              <div style="padding: clamp(32px, 6vw, 48px); text-align: center;">
-                <p style="font-weight: 600; color: var(--primary-green); font-size: 1.15rem; margin: 0;">
+              <div style="padding: clamp(32px, 6vw, 48px); text-align: center; position: relative;">
+                <button onclick="closeWaitlistModal()" style="position: absolute; top: -16px; right: -8px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-gray); line-height: 1;">&times;</button>
+                <p style="font-weight: 600; color: var(--text-dark); font-size: 1.15rem; margin: 0;">
                   You're on the list! We'll email you as soon as the ScanBand is available.
                 </p>
               </div>
