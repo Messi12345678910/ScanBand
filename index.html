@@ -121,14 +121,7 @@
     .demo-section .video-frame { max-width: 960px; margin: clamp(28px, 4vw, 48px) auto 0; }
 
     /* WHOOP-style full-bleed video hero */
-    /* WHOOP-style reveal: hero pins while the next section slides up over it */
-    .reveal-stack { position: relative; }
-    .reveal-stack > #stakes { position: relative; z-index: 2; background: var(--bg);
-      /* At least as tall as the hero so it fully covers it as it slides up */
-      min-height: min(92vh, 860px); display: flex; flex-direction: column; justify-content: center; }
-    .hero-video { position: sticky; top: 0; z-index: 1; width: 100%; height: min(92vh, 860px); min-height: 460px; overflow: hidden; background: #05060a; }
-    /* Dim overlay that fades in as the hero gets covered */
-    .hero-cover { position: absolute; inset: 0; background: #05060a; opacity: 0; pointer-events: none; z-index: 3; }
+    .hero-video { position: relative; width: 100%; height: min(92vh, 860px); min-height: 460px; overflow: hidden; background: #05060a; }
     /* Preview: crop the burned-in caption band out of the bottom */
     .hero-video-el { position: absolute; top: 0; left: 0; width: 100%; height: 114%; object-fit: cover; object-position: center top; }
     /* Playing: reveal the full frame so captions show (and native controls stay usable) */
@@ -593,8 +586,6 @@
     </div>
   </header>
 
-  <!-- HERO + first section: pinned hero that the next section slides up over (WHOOP-style) -->
-  <div class="reveal-stack">
   <!-- HERO: full-bleed video with overlaid headline (WHOOP-style) -->
   <section class="hero-video" id="demo">
     <video class="hero-video-el" id="howVideo" src="Images/Final ScanBand How it Works.mp4" muted loop autoplay playsinline preload="metadata"></video>
@@ -612,7 +603,6 @@
         </div>
       </div>
     </div>
-    <div class="hero-cover" aria-hidden="true"></div>
   </section>
 
   <!-- WHY IT'S GAME-CHANGING (GRAPH) -->
@@ -645,7 +635,6 @@
       <p class="vs-cite reveal">Scans in the seconds before receiving the ball. Source: Geir Jordet.</p>
     </div>
   </section>
-  </div><!-- /.reveal-stack -->
 
   <!-- THE APP: product + app together -->
   <section class="app-section" id="app">
@@ -905,26 +894,6 @@
     })();
   </script>
 
-  <!-- Dim the pinned hero as the next section slides up over it (WHOOP-style) -->
-  <script>
-    (function(){
-      var hero = document.querySelector('.hero-video');
-      var cover = document.querySelector('.hero-cover');
-      if(!hero || !cover) return;
-      var MAX = 0.72;
-      var ticking = false;
-      function update(){
-        ticking = false;
-        var h = hero.offsetHeight || 1;
-        var p = Math.min(Math.max(window.scrollY / h, 0), 1);
-        cover.style.opacity = (p * MAX).toFixed(3);
-      }
-      function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
-      update();
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', update);
-    })();
-  </script>
 
 </body>
 
