@@ -4,626 +4,928 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScanBand - The First Soccer Wearable That Trains Field Vision</title>
-  <meta name="description" content="ScanBand is the world's first wearable soccer training device that gives real-time scanning feedback. Develop Messi-like field awareness and improve your soccer vision. Trusted by elite youth players.">
-  <meta name="keywords" content="ScanBand, soccer training, vision training, scanning feedback, soccer wearable, field awareness, youth soccer, elite soccer training, Connor Owen, Columbia soccer">
+  <title>ScanBand — Train Elite Soccer Field Vision</title>
+  <meta name="description" content="ScanBand is the wearable that trains soccer field vision. It buzzes when you stop scanning and measures your progress in the ScanBand app — building the awareness elite players are recruited for.">
+  <meta name="keywords" content="ScanBand, soccer training, vision training, scanning, soccer wearable, field awareness, youth soccer, Connor Owen, Columbia soccer">
   <meta name="author" content="Connor Owen">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://scanband.com">
+  <link rel="canonical" href="https://getscanband.com">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://scanband.com">
-  <meta property="og:title" content="ScanBand - World's First Soccer Vision Training Wearable">
-  <meta property="og:description" content="Train your soccer vision with ScanBand - the world's first wearable that gives real-time scanning feedback to develop Messi-like field awareness.">
-  <meta property="og:image" content="https://scanband.com/Images/ScanBand%201.png">
-
-  <!-- Twitter -->
+  <meta property="og:url" content="https://getscanband.com">
+  <meta property="og:title" content="ScanBand — Train Elite Soccer Field Vision">
+  <meta property="og:description" content="The wearable that buzzes when you stop scanning and measures your progress — building the field vision elite players are recruited for.">
+  <meta property="og:image" content="https://getscanband.com/Images/ScanBand%201.png">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://scanband.com">
-  <meta property="twitter:title" content="ScanBand - World's First Soccer Vision Training Wearable">
-  <meta property="twitter:description" content="Train your soccer vision with ScanBand - the world's first wearable that gives real-time scanning feedback to develop Messi-like field awareness.">
-  <meta property="twitter:image" content="https://scanband.com/Images/ScanBand%201.png">
+  <meta property="twitter:image" content="https://getscanband.com/Images/ScanBand%201.png">
 
   <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon-32x32.png">
-  <meta name="theme-color" content="#1B5E20">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#16161f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "ScanBand",
-    "description": "World's first wearable soccer training device that gives real-time scanning feedback",
-    "brand": {
-      "@type": "Brand",
-      "name": "ScanBand"
-    },
-    "category": "Sports Training Equipment",
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/PreOrder",
-      "price": "TBD",
-      "priceCurrency": "USD"
-    },
-    "manufacturer": {
-      "@type": "Person",
-      "name": "Connor Owen",
-      "description": "D1 soccer player at Columbia University and former San Jose Earthquakes Academy player"
+  <style>
+    :root {
+      --bg: #16161f;
+      --bg-2: #1b1b26;
+      --card: #22222e;
+      --ink: #e8e8f0;
+      --ink-2: #a6a6b8;
+      --ink-3: #75758a;
+      --accent: #6f7cf5;
+      --accent-2: #f0a35a;
+      --good: #2fae62;
+      --line: rgba(255,255,255,0.08);
+      --radius: 18px;
+      --maxw: 1080px;
+      /* Type scale — keep the whole site to these */
+      --fs-header: clamp(1.95rem, 4.4vw, 2.9rem);
+      --fs-subhead: clamp(1.12rem, 2.1vw, 1.35rem);
+      --fs-body: 1rem;
+      --fs-cap: 0.82rem;
+      /* Vertical spacing rhythm — keep gaps to these */
+      --gap: clamp(28px, 4vw, 44px);
+      --gap-lg: clamp(46px, 6.5vw, 76px);
     }
-  }
-  </script>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+    section { padding: clamp(56px, 9vw, 104px) 0; }
+    h1, h2, h3 { line-height: 1.08; letter-spacing: -0.02em; margin: 0; font-weight: 800; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: var(--fs-cap); font-weight: 700; color: var(--accent); margin-bottom: 14px; }
+    .lead { color: var(--ink-2); font-size: var(--fs-body); }
+    .accent { color: var(--accent); }
 
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-weight: 700; font-size: var(--fs-body);
+      border: none; cursor: pointer; border-radius: 999px; padding: 14px 28px; transition: transform .15s ease, box-shadow .15s ease; }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 24px rgba(111,124,245,0.35); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(111,124,245,0.45); }
+    .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Header */
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(22,22,31,0.85); backdrop-filter: saturate(150%) blur(12px); border-bottom: 1px solid var(--line); }
+    .nav-inner { position: relative; display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .logo { font-weight: 800; font-size: 1.25rem; letter-spacing: 0.02em; }
+    .logo .b { color: var(--accent); }
+    .nav-links { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: clamp(28px, 3.4vw, 48px); }
+    .nav-links a { color: var(--ink-2); font-weight: 700; font-size: var(--fs-body); transition: color .15s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { padding: 10px 20px; font-size: var(--fs-body); }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); margin: 5px 0; border-radius: 2px; transition: .2s; }
+    .mobile-menu { display: none; }
+
+    /* Hero */
+    .hero { padding: clamp(40px, 7vw, 72px) 0; position: relative; overflow-x: clip; }
+    /* Full-screen sections on desktop */
+    @media (min-width: 861px) {
+      section { min-height: calc(100vh - 66px); min-height: calc(100svh - 66px); display: grid; align-content: center; }
+      /* Keep the Messi hook + the product tagline both above the fold, with room to breathe */
+      #stakes { min-height: 0; padding: clamp(34px, 4.6vw, 72px) 0 clamp(24px, 3.4vw, 50px); }
+      #stakes .section-head { margin-bottom: clamp(20px, 2.6vw, 34px); }
+      #stakes .vs-side { padding: clamp(18px, 2.4vw, 30px) clamp(16px, 2.4vw, 26px); }
+      #stakes .vs-num { font-size: clamp(2.6rem, 6.5vw, 4.4rem); }
+      #stakes .vs-cite { margin-top: 14px; }
+      .hero { min-height: 0; align-content: center; padding: clamp(28px, 3.8vw, 54px) 0 clamp(44px, 6vw, 84px); }
+      .proof { min-height: 0; padding-bottom: calc(clamp(56px, 9vw, 104px) + 28px); }
+      #video { min-height: 0; display: block; padding: clamp(28px, 4vw, 52px) 0; }
+      .final { min-height: 0; padding-top: clamp(40px, 6vw, 80px); }
+    }
+    .hero::before { content:''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 120%; height: 520px;
+      background: radial-gradient(60% 60% at 50% 0%, rgba(111,124,245,0.20), transparent 70%); pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(28px, 5vw, 56px); align-items: center; position: relative; }
+    .hero h1 { font-size: var(--fs-header); font-weight: 800; max-width: 20ch; }
+    .hero h1 .accent { display: inline; }
+    .hero p.lead { margin: 20px 0 30px; max-width: 30ch; }
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-media img { border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+    .hero-media .levelchart { box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+    .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 26px; }
+    .tag { font-size: 0.8rem; font-weight: 700; color: var(--ink-2); background: var(--card); border: 1px solid var(--line); padding: 7px 13px; border-radius: 999px; }
+
+    /* Video */
+    .video-frame { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .demo-section .wrap { width: 100%; }
+    .demo-section .video-frame { max-width: 960px; margin: clamp(28px, 4vw, 48px) auto 0; }
+
+    /* WHOOP-style full-bleed video hero */
+    /* WHOOP-style reveal: hero pins while the next section slides up over it */
+    .reveal-stack { position: relative; }
+    .reveal-stack > #stakes { position: relative; z-index: 2; background: var(--bg);
+      /* At least as tall as the hero so it fully covers it as it slides up */
+      min-height: min(92vh, 860px); display: flex; flex-direction: column; justify-content: center; }
+    .hero-video { position: sticky; top: 0; z-index: 1; width: 100%; height: min(92vh, 860px); min-height: 460px; overflow: hidden; background: #05060a; }
+    /* Dim overlay that fades in as the hero gets covered */
+    .hero-cover { position: absolute; inset: 0; background: #05060a; opacity: 0; pointer-events: none; z-index: 3; }
+    /* Preview: crop the burned-in caption band out of the bottom */
+    .hero-video-el { position: absolute; top: 0; left: 0; width: 100%; height: 114%; object-fit: cover; object-position: center top; }
+    /* Playing: reveal the full frame so captions show (and native controls stay usable) */
+    .hero-video.playing .hero-video-el { height: 100%; object-position: center bottom; }
+    .hero-video-scrim { position: absolute; inset: 0; pointer-events: none; transition: opacity .45s ease;
+      background: linear-gradient(180deg, rgba(8,9,14,0.45) 0%, rgba(8,9,14,0.05) 30%, rgba(8,9,14,0.35) 62%, rgba(8,9,14,0.85) 100%); }
+    .hero-video-content { position: absolute; inset: 0; display: flex; align-items: center; padding-bottom: clamp(30px, 9vh, 96px); pointer-events: none; transition: opacity .45s ease; }
+    .hero-video-content .wrap { pointer-events: auto; }
+    /* Left-aligned hero copy, WHOOP style */
+    @media (min-width: 861px) {
+      .hero-video-content { justify-content: flex-start; }
+      .hero-video-content .wrap { margin: 0; width: auto; max-width: min(820px, 64vw); padding-left: clamp(40px, 5vw, 90px); }
+    }
+    .hero-video-content h1 { color: #fff; font-size: clamp(2.9rem, 7.3vw, 5.2rem); font-weight: 800; line-height: 1.04; letter-spacing: -0.02em; max-width: none; margin: 0 0 clamp(18px, 2.4vw, 30px); text-shadow: 0 2px 30px rgba(0,0,0,0.4); }
+    .hero-video-content h1 .accent { color: var(--accent); }
+    .hero-video-sub { color: #fff; font-size: var(--fs-subhead); font-weight: 800; line-height: 1.5; margin: 0 0 clamp(22px, 3vw, 32px); text-shadow: 0 1px 16px rgba(0,0,0,0.55); }
+    .hero-video-sub .accent { color: #fff; }
+    /* On desktop the two CTAs sit side by side — keep the subtext to a single line matching that width */
+    @media (min-width: 861px) { .hero-video-sub { white-space: nowrap; } }
+    .hero-video-actions { display: flex; align-items: center; gap: clamp(12px, 1.5vw, 18px); flex-wrap: wrap; }
+    .hero-see { display: inline-flex; align-items: center; gap: 9px; color: #fff; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: background .2s ease; }
+    .hero-see svg { margin-left: -1px; }
+    .hero-see:hover { background: rgba(255,255,255,0.26); }
+    .hero-video.playing .hero-video-scrim, .hero-video.playing .hero-video-content { opacity: 0; pointer-events: none; }
+    .video-frame iframe, .video-frame video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-scrim { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(60% 60% at 50% 50%, rgba(0,0,0,0.08), rgba(0,0,0,0.44)); transition: opacity .45s ease; }
+    .video-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display: grid; place-items: center; width: clamp(66px, 8vw, 94px); height: clamp(66px, 8vw, 94px); border-radius: 50%; border: none; cursor: pointer; color: #fff; background: rgba(111,124,245,0.94); box-shadow: 0 14px 44px rgba(0,0,0,0.5), 0 0 0 8px rgba(111,124,245,0.16); transition: transform .2s ease, background .2s ease, opacity .3s ease; }
+    .video-play svg { margin-left: 4px; }
+    .video-play:hover { transform: translate(-50%,-50%) scale(1.08); background: var(--accent); }
+    .video-frame.playing .video-play { opacity: 0; pointer-events: none; transform: translate(-50%,-50%) scale(.6); }
+    .video-frame.playing .video-scrim { opacity: 0; }
+
+    /* Stakes */
+    .section-head { max-width: 640px; margin-bottom: var(--gap-lg); }
+    .section-head h2 { font-size: var(--fs-header); }
+    .section-head p { color: var(--ink-2); margin-top: 14px; font-size: 1.06rem; }
+    .stat-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .stat-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .stat-card .big { font-size: clamp(3rem, 9vw, 4.4rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+    .stat-card.messi .big { color: var(--accent); }
+    .stat-card.pl .big { color: var(--ink); }
+    .stat-card .who { font-weight: 800; margin: 14px 0 4px; font-size: 1.05rem; }
+    .stat-card .desc { color: var(--ink-2); font-size: 0.92rem; }
+    .stat-card img { border-radius: 12px; margin-top: 16px; height: 120px; width: 100%; object-fit: cover; }
+    .stakes-punch { margin-top: 28px; font-size: clamp(1.1rem, 2.6vw, 1.35rem); font-weight: 700; max-width: 40ch; }
+
+    /* Scan-rate-by-level chart */
+    .levelchart { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px,4vw,40px) clamp(14px,3vw,32px); }
+    .lc-title { font-weight: 700; color: var(--ink-2); font-size: 0.8rem; text-align: center; margin-bottom: 26px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .lc-bars { display: flex; align-items: flex-end; justify-content: space-between; gap: clamp(6px,1.5vw,18px); }
+    .lc-col { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .lc-plot { height: clamp(180px, 30vw, 260px); width: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+    .lc-val { font-weight: 800; font-size: clamp(0.95rem, 2.2vw, 1.35rem); margin-bottom: 8px; color: var(--ink); }
+    .lc-fill { width: 100%; max-width: 84px; border-radius: 9px 9px 0 0; background: var(--accent); }
+    .lc-col.messi .lc-fill { box-shadow: 0 0 30px rgba(111,124,245,0.6); }
+    .lc-col.messi .lc-val { color: var(--accent); font-size: clamp(1.2rem, 2.8vw, 1.75rem); }
+    .lc-name { margin-top: 12px; font-size: clamp(0.64rem, 1.5vw, 0.84rem); color: var(--ink-2); text-align: center; font-weight: 700; line-height: 1.25; }
+    .lc-col.messi .lc-name { color: var(--ink); font-weight: 800; }
+    .lc-foot { text-align: center; color: var(--ink-3); font-size: 0.78rem; margin-top: 22px; }
+
+    /* Messi vs PL comparison */
+    .vs-card { display: grid; grid-template-columns: 1fr auto 1fr; gap: clamp(12px, 3vw, 28px); align-items: center; margin-top: 0; }
+    .vs-side { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 3vw, 40px) clamp(16px, 3vw, 28px); text-align: center; }
+    .vs-num { font-size: clamp(3rem, 10vw, 5.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+    .vs-side.messi .vs-num, .vs-side.messi .vs-who { color: var(--accent); }
+    .vs-side.pl .vs-num, .vs-side.pl .vs-who { color: var(--ink); }
+    .vs-who { font-weight: 800; font-size: var(--fs-subhead); margin: 14px 0 0; }
+    /* stat (number + player) beside a portrait image */
+    .vs-top { display: flex; align-items: stretch; gap: clamp(12px, 1.8vw, 20px); }
+    .vs-stat { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .vs-img { flex: 1 1 0; min-width: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 3 / 4; background: #0e0e15; border: 1px solid var(--line); }
+    .vs-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; display: block; }
+    .vs-side.pl .vs-top { flex-direction: row-reverse; }
+    .vs-img.logo { background: #fff; display: grid; place-items: center; }
+    .vs-img.logo img { object-fit: contain; width: 74%; height: 74%; object-position: center; }
+    .vs-desc { color: var(--ink-2); font-size: var(--fs-body); margin-top: clamp(16px, 2vw, 24px); }
+    .vs-badge { width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--accent); color: var(--accent); font-weight: 800; font-size: var(--fs-body); display: grid; place-items: center; background: var(--bg-2); }
+    .vs-cite { text-align: center; color: var(--ink-3); font-size: var(--fs-cap); margin: 18px 0 0; }
+
+    /* Scan rate by players + 2x stat */
+    .stakes-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: clamp(20px, 3vw, 28px); align-items: stretch; margin-top: clamp(28px, 5vw, 48px); }
+    .freqchart, .stat2x { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(22px, 3vw, 32px); }
+    .freqchart h3, .stat2x .stat2x-num { letter-spacing: -0.02em; }
+    .freqchart h3 { font-size: var(--fs-subhead); }
+    .freq-sub { color: var(--ink-2); font-size: var(--fs-body); margin: 8px 0 22px; }
+    .freq-rows { display: grid; gap: 9px; }
+    .freq-row { display: flex; }
+    .freq-bar { height: 42px; min-width: 44%; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; color: #fff; font-weight: 700; font-size: var(--fs-body); }
+    .freq-name, .freq-val { white-space: nowrap; }
+    .freq-cite { color: var(--ink-3); font-size: var(--fs-cap); margin: 18px 0 0; }
+    .stat2x { display: flex; flex-direction: column; }
+    .stat2x-num { font-size: clamp(3.2rem, 8vw, 4.6rem); font-weight: 800; line-height: 1; }
+    .stat2x-num span { font-size: 0.5em; color: var(--ink-2); }
+    .stat2x p { color: var(--ink-2); font-size: var(--fs-body); margin: 18px 0 0; line-height: 1.55; }
+    .stat2x-cite { color: var(--ink-3); font-size: var(--fs-cap); margin-top: auto !important; padding-top: 22px; font-weight: 700; }
+    .stat2x.wide { flex-direction: row; align-items: center; gap: clamp(20px, 4vw, 44px); max-width: 860px; margin: var(--gap-lg) auto 0; }
+    .stat2x.wide .stat2x-num { flex: none; }
+    .stat2x.wide .stat2x-body { flex: 1; }
+    .stat2x.wide .stat2x-body p { margin: 0; }
+    .stat2x.wide .stat2x-body .stat2x-cite { margin: 12px 0 0 !important; padding: 0; }
+    @media (max-width: 620px) { .stat2x.wide { flex-direction: column; align-items: flex-start; gap: 14px; } }
+    @media (max-width: 760px) {
+      .stakes-grid { grid-template-columns: 1fr; }
+      /* Stack the two cards so each has room for the stat + image */
+      #stakes .vs-card { grid-template-columns: 1fr; gap: 16px; }
+      #stakes .vs-badge { margin: 0 auto; }
+      #stakes .vs-num { font-size: clamp(2.6rem, 13vw, 3.6rem); }
+    }
+
+    /* How it works */
+    .how { background: var(--bg-2); }
+    .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+    .steps { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 18px; }
+    .steps li { display: flex; gap: 16px; }
+    .steps .num { flex: none; width: 34px; height: 34px; border-radius: 10px; background: var(--accent-soft, #262742); color: var(--accent); display: grid; place-items: center; font-weight: 800; border: 1px solid var(--line); }
+    .steps .s-body b { display: block; margin-bottom: 3px; }
+    .steps .s-body span { color: var(--ink-2); font-size: var(--fs-body); }
+    .how-media { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .how-media img { border-radius: 14px; border: 1px solid var(--line); background: #fff; aspect-ratio: 1; object-fit: contain; padding: 8px; }
+    .how-media .tall { grid-column: 1 / -1; aspect-ratio: 16/9; }
+    /* Interactive showcase (band / how it works / app) */
+    .showcase { background: linear-gradient(180deg, #1e1e2a, #191922); border: 1px solid var(--line); border-radius: 22px; padding: 14px; box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+    .showcase-tabs { display: flex; gap: 4px; background: rgba(0,0,0,0.28); border: 1px solid var(--line); border-radius: 999px; padding: 4px; margin-bottom: 14px; }
+    .sc-tab { flex: 1; border: none; background: transparent; color: var(--ink-2); font: inherit; font-weight: 700; font-size: 0.82rem; padding: 9px 8px; border-radius: 999px; cursor: pointer; transition: .15s; }
+    .sc-tab:hover { color: var(--ink); }
+    .sc-tab.active { background: var(--accent); color: #fff; }
+    .showcase-stage { position: relative; transition: height .35s cubic-bezier(.4,0,.2,1); }
+    .sc-view { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transform: translateX(28px); transition: opacity .28s ease, transform .35s cubic-bezier(.4,0,.2,1); pointer-events: none; }
+    .sc-view.active { opacity: 1; transform: none; pointer-events: auto; }
+    .sc-frame { position: relative; background: #fff; border-radius: 16px; overflow: hidden; }
+    .sc-frame img { display: block; width: 100%; }
+    .sc-phone { text-align: center; }
+    .sc-phone img { display: block; max-height: 440px; width: auto; max-width: 100%; margin: 0 auto; border-radius: 22px; border: 1px solid var(--line); }
+    .sc-cap { color: var(--ink-2); font-size: 0.92rem; line-height: 1.5; margin: 16px 6px 0; text-align: center; }
+    .sc-cap--part { min-height: 3.2em; transition: opacity .2s ease; }
+    .app-badge-sc { display: inline-flex; align-items: center; gap: 7px; font-size: 0.76rem; font-weight: 700; color: var(--accent); background: #262742; border: 1px solid var(--line); padding: 6px 13px; border-radius: 999px; margin: 0 auto 14px; }
+    .sc-view[data-view="app"] { text-align: center; }
+    /* clickable pulsing labels on the how view */
+    .callout { position: absolute; transform: translate(-50%,-50%); display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer;
+      background: rgba(18,18,26,0.94); border: 1px solid var(--line); color: var(--ink); padding: 8px 13px; border-radius: 999px; white-space: nowrap; box-shadow: 0 8px 20px rgba(0,0,0,0.45); transition: .15s; }
+    .callout:hover { border-color: var(--accent); }
+    .callout.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .callout .dot { position: relative; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+    .callout.active .dot { background: #fff; }
+    .callout .dot::after { content: ''; position: absolute; left: 50%; top: 50%; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px;
+      border-radius: 50%; border: 2px solid var(--accent); animation: pulsering 1.8s ease-out infinite; }
+    .callout.active .dot::after { display: none; }
+    @keyframes pulsering { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(3.6); opacity: 0; } }
+    .feature-bullets { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; }
+    .feature-bullets li { position: relative; padding-left: 30px; font-weight: 700; color: var(--ink); }
+    .feature-bullets li::before { content: '✓'; position: absolute; left: 0; top: -1px; color: var(--accent); font-weight: 800; }
+    .how-labeled { position: relative; }
+    .how-labeled img { border-radius: var(--radius); border: 1px solid var(--line); }
+    .marker { position: absolute; transform: translate(-50%,-50%); width: 34px; height: 34px; border-radius: 50%;
+      background: var(--accent); color: #fff; font-weight: 800; font-size: 1rem; display: grid; place-items: center;
+      box-shadow: 0 6px 18px rgba(111,124,245,0.5); border: 2px solid #fff; }
+
+    /* App */
+    .app-section .section-head { margin-left: auto; margin-right: auto; text-align: center; }
+    .app-badge { display: inline-flex; align-items: center; gap: 7px; font-size: var(--fs-cap); font-weight: 700; color: var(--accent); background: #262742; border: 1px solid var(--line); padding: 7px 15px; border-radius: 999px; margin-bottom: 16px; }
+    /* Second hero tile (app) — matches the animation tile */
+    .app-tile { background: radial-gradient(120% 120% at 50% 0%, #26263c, #191922); border: 1px solid var(--line); border-radius: var(--radius); overflow: visible; box-shadow: 0 30px 70px rgba(0,0,0,0.45); padding: clamp(14px, 2vw, 24px) clamp(18px, 3vw, 40px) clamp(28px, 3.5vw, 44px); }
+    /* Tighten header -> content gap (match the Messi section) */
+    .app-section .hero-center .demo { margin-top: 0; }
+    .app-section .section-head { margin-bottom: clamp(20px, 2.6vw, 34px); }
+    /* Product scene (left) + flat app phones (right) — one centered, evenly-spaced row */
+    .app-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 2vw, 32px); align-items: center; justify-items: center; }
+    /* Headband + pod blended into one scene, enlarged and pulled left */
+    .product-scene { position: relative; width: 122%; margin-left: -22%; justify-self: start; }
+    .ps-band { display: block; width: 100%; height: auto; }
+    .ps-pod { position: absolute; right: 12%; bottom: 4%; width: 42%; height: auto; filter: drop-shadow(0 22px 26px rgba(0,0,0,0.55));
+      -webkit-mask-image: radial-gradient(ellipse 60% 58% at 50% 46%, #000 52%, transparent 100%);
+      mask-image: radial-gradient(ellipse 60% 58% at 50% 46%, #000 52%, transparent 100%); }
+    /* Phones flat and flush, side by side */
+    .app-showcase .app-shots { margin: 0; flex-wrap: nowrap; gap: clamp(8px, 1vw, 16px); justify-content: center; }
+    .app-showcase .phone { height: clamp(340px, 33vw, 500px); transform: none; transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s ease; }
+    .app-showcase .phone:hover { transform: translateY(-6px) scale(1.02); z-index: 4; box-shadow: 0 40px 84px rgba(0,0,0,0.65); }
+    .app-shots { display: flex; justify-content: center; align-items: stretch; gap: clamp(16px, 2.5vw, 34px); flex-wrap: wrap; margin: clamp(18px, 2.5vw, 30px) auto 0; }
+    .phone { flex: none; height: clamp(500px, 72vh, 760px); border-radius: 36px; padding: 11px; background: #0e0e15; border: 1px solid var(--line); box-shadow: 0 24px 50px rgba(0,0,0,0.5); transition: transform .28s cubic-bezier(.4,0,.2,1), box-shadow .28s ease; }
+    .phone img { height: 100%; width: auto; border-radius: 26px; display: block; }
+    /* Player-ranking column chart (horizontal, spanning the tile) */
+    .app-colchart { position: relative; margin: clamp(24px, 3.5vw, 40px) auto 0; padding: 22px clamp(18px, 3vw, 32px) 18px; text-align: left; transition: transform .28s cubic-bezier(.4,0,.2,1), box-shadow .28s ease; }
+    .col-bars { display: flex; align-items: flex-end; gap: clamp(5px, 1vw, 16px); margin: clamp(16px, 2vw, 24px) 0 0; }
+    .col { flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 0; }
+    .col-plot { width: 100%; height: clamp(150px, 20vw, 230px); display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+    .col-val { font-weight: 800; font-size: 0.82rem; color: var(--ink); margin-bottom: 6px; }
+    .col-fill { width: 100%; max-width: 66px; border-radius: 8px 8px 0 0; }
+    .col-name { margin-top: 10px; font-size: clamp(0.6rem, 1.3vw, 0.74rem); color: var(--ink-2); font-weight: 700; text-align: center; line-height: 1.2; }
+    .you-col .col-name { color: #f5a623; font-weight: 800; }
+    .you-col .col-val { color: #f5a623; }
+    .col-scroll { position: relative; }
+    .col-scroll::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 52px; pointer-events: none; background: linear-gradient(90deg, rgba(0,0,0,0), var(--card)); opacity: 0; transition: opacity .3s ease; }
+    .col-more { position: absolute; top: clamp(20px, 3.4vw, 30px); right: clamp(20px, 3.4vw, 30px); display: inline-flex; align-items: center; gap: 5px; font-size: 0.72rem; font-weight: 800; color: #fff; background: rgba(111,124,245,0.95); padding: 6px 12px; border-radius: 999px; pointer-events: none; opacity: 0; transition: opacity .3s ease; box-shadow: 0 6px 18px rgba(0,0,0,0.45); white-space: nowrap; }
+    .col-more-arw { display: inline-block; animation: nudgeX 1.1s ease-in-out infinite; }
+    @keyframes nudgeX { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+    .app-colchart.scrollable .col-scroll::after, .app-colchart.scrollable .col-more { opacity: 1; }
+    .app-colchart.scrollable.at-end .col-scroll::after, .app-colchart.scrollable.at-end .col-more { opacity: 0; }
+    .app-tile .app-cta { text-align: center; margin-top: clamp(22px, 3vw, 30px); }
+    /* Hover-to-enlarge (visual only) */
+    .app-shots .phone:hover { transform: scale(1.05); box-shadow: 0 36px 80px rgba(0,0,0,0.65); position: relative; z-index: 3; }
+    .app-colchart:hover { transform: scale(1.02); box-shadow: 0 34px 74px rgba(0,0,0,0.5); }
+    .app-freq h3 { font-size: 1.1rem; }
+    .app-freq .freq-sub { font-size: 0.82rem; margin: 6px 0 16px; }
+    .app-freq .freq-rows { flex: 1; display: grid; grid-template-rows: repeat(10, 1fr); gap: 5px; margin: 0; }
+    .app-freq .freq-bar { height: 100%; min-width: 42%; padding: 0 12px; font-size: 0.8rem; }
+    .app-freq .freq-cite { font-size: 0.68rem; margin-top: 12px; }
+    .app-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: clamp(34px, 5vw, 52px); }
+    .app-point { text-align: center; }
+    .app-point .ico { font-size: 1.5rem; }
+    .app-point b { display: block; margin: 8px 0 4px; }
+    .app-point span { color: var(--ink-2); font-size: var(--fs-body); }
+
+    /* Founder */
+    .founder { background: var(--bg-2); }
+    .founder-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(28px, 5vw, 52px); align-items: center; }
+    .founder-photo { border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; }
+    .founder-photo img { display: block; width: 100%; }
+    .founder-photo.zoom img { transform: scale(1.28); transform-origin: 50% 40%; }
+    /* Inline story slider */
+    .founder-carousel { position: relative; overflow: hidden; cursor: pointer; }
+    .founder-track { display: flex; align-items: center; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+    .founder-slide { flex: 0 0 100%; min-width: 100%; }
+    .founder-slide.text-only { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 320px; padding: 0 clamp(16px, 6vw, 120px); }
+    .fs-text { max-width: 640px; }
+    .founder-slide .link { margin-top: clamp(20px, 2.5vw, 30px); }
+    .founder-count { position: absolute; right: clamp(4px, 1.4vw, 16px); bottom: clamp(4px, 1.4vw, 16px); font-weight: 700; font-size: var(--fs-body); color: var(--ink-3); letter-spacing: .04em; pointer-events: none; }
+    .founder-count .fc-cur { color: var(--ink); }
+    .founder h2 { font-size: var(--fs-header); }
+    .founder p { color: var(--ink-2); margin: 16px 0; font-size: 1.06rem; }
+    .founder .link { color: var(--accent); font-weight: 700; background: none; border: none; padding: 0; font-family: inherit; font-size: 1rem; cursor: pointer; }
+    .founder .link:hover { text-decoration: underline; }
+
+    /* Story card carousel (modal) */
+    .story-modal { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 20px;
+      background: rgba(8,8,12,0.88); backdrop-filter: blur(6px); }
+    .story-modal.open { display: flex; }
+    .story-close { position: absolute; top: 18px; right: 24px; background: none; border: none; color: var(--ink-2); font-size: 2.2rem; line-height: 1; cursor: pointer; }
+    .story-close:hover { color: var(--ink); }
+    .story-shell { width: min(660px, 94vw); }
+    .story-viewport { overflow: hidden; border-radius: 20px; border: 1px solid var(--line); background: var(--card); }
+    .story-track { display: flex; transition: transform .4s cubic-bezier(.4,0,.2,1); }
+    .story-card { flex: 0 0 100%; display: flex; flex-direction: column; }
+    .story-card.text-only { justify-content: center; }
+    .story-card.text-only .sc-body { padding: 44px 30px; }
+    .story-card .sc-photo { width: 100%; height: clamp(200px, 32vh, 300px); object-fit: cover; display: block; background: #0e0e15; }
+    .story-card .sc-body { padding: 26px 30px 30px; }
+    .story-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
+    .story-card p { color: var(--ink-2); font-size: 1rem; line-height: 1.6; margin: 0; }
+    .story-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 20px; }
+    .story-nav { width: 46px; height: 46px; border-radius: 50%; background: var(--card); border: 1px solid var(--line); color: var(--ink);
+      font-size: 1.4rem; cursor: pointer; display: grid; place-items: center; transition: .15s; }
+    .story-nav:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+    .story-nav:disabled { opacity: 0.3; cursor: default; }
+    .story-dots { display: flex; gap: 8px; }
+    .story-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3); cursor: pointer; transition: .2s; }
+    .story-dots span.active { background: var(--accent); width: 22px; border-radius: 4px; }
+
+    /* Proof */
+    .proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 48px); align-items: center; }
+    .testimonial { display: flex; gap: clamp(24px, 4vw, 52px); align-items: flex-start; max-width: 940px; margin: 0 auto; }
+    .tm-photo { width: clamp(92px, 12vw, 132px); height: clamp(92px, 12vw, 132px); border-radius: 50%; object-fit: cover; flex: none; }
+    .tm-body { flex: 1; }
+    .tm-quote { font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 700; line-height: 1.35; color: var(--ink); margin: 0; }
+    .tm-attr { margin-top: clamp(20px, 3vw, 32px); line-height: 1.5; }
+    .tm-name { font-weight: 800; color: var(--ink); font-size: 1.1rem; }
+    .tm-sub { color: var(--ink-2); }
+    .tm-cite { color: var(--ink-3); font-size: var(--fs-cap); margin: 16px 0 0; }
+    .proof .testimonial + .testimonial { margin-top: clamp(40px, 6vw, 76px); }
+    .quote { font-size: var(--fs-subhead); font-weight: 700; line-height: 1.4; }
+    .quote .by { display: block; margin-top: 16px; font-size: var(--fs-body); font-weight: 700; color: var(--ink-2); }
+    .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+    .badge { font-size: var(--fs-cap); font-weight: 700; color: var(--ink-2); background: var(--card); border: 1px solid var(--line); padding: 9px 15px; border-radius: 999px; }
+
+    /* Final CTA */
+    .final { text-align: center; }
+    .final-box { background: linear-gradient(180deg, #22222e, #1b1b26); border: 1px solid var(--line); border-radius: 28px; padding: clamp(40px, 7vw, 72px) 24px; position: relative; overflow: hidden; }
+    .final-box::before { content:''; position:absolute; inset:0; background: radial-gradient(50% 80% at 50% 0%, rgba(111,124,245,0.18), transparent 70%); }
+    .final h2 { font-size: var(--fs-header); position: relative; }
+    .final p { color: var(--ink-2); margin: 16px auto 30px; max-width: 44ch; position: relative; }
+    .final .btn { position: relative; }
+    .final .sub-note { display:block; margin-top: 16px; font-size: 0.86rem; color: var(--ink-3); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--ink-3); }
+    .foot-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .foot-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .foot-links a { color: var(--ink-2); font-size: var(--fs-body); }
+    .foot-links a:hover { color: var(--ink); }
+
+    /* Interactive scan demo */
+    .demo { background: var(--bg-2); }
+    .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+    .demo-stage { position: relative; background: radial-gradient(120% 120% at 50% 0%, #26263c, #191922); border: 1px solid var(--line); border-radius: var(--radius); min-height: 360px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer; user-select: none; box-shadow: 0 30px 70px rgba(0,0,0,0.45); }
+    .demo-stage.flash { animation: stageflash .45s ease; }
+    @keyframes stageflash { 0% { box-shadow: inset 0 0 0 3px rgba(240,163,90,0), 0 30px 70px rgba(0,0,0,.45); } 30% { box-shadow: inset 0 0 0 4px rgba(240,163,90,.95), inset 0 0 90px rgba(240,163,90,.4), 0 30px 70px rgba(0,0,0,.45); } 100% { box-shadow: inset 0 0 0 3px rgba(240,163,90,0), 0 30px 70px rgba(0,0,0,.45); } }
+    .tap-hint { position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; font-size: .78rem; color: var(--ink-3); pointer-events: none; }
+    .player-svg { width: min(260px, 62%); height: auto; overflow: visible; position: relative; z-index: 2; }
+    .player-svg .head { transform-origin: 100px 92px; transition: transform .4s cubic-bezier(.34,1.2,.5,1); }
+    .player-svg .face { transition: transform .4s cubic-bezier(.34,1.2,.5,1); }
+    .player-svg .ear { transition: opacity .35s ease; }
+    .player-svg .nose { transition: transform .4s cubic-bezier(.34,1.2,.5,1); transform-origin: 100px 106px; }
+    /* Check-the-shoulder turn */
+    .player-svg.scan-left .head { transform: translateX(-7px) scaleX(.82); }
+    .player-svg.scan-left .face { transform: translateX(-14px); }
+    .player-svg.scan-left .nose { transform: translateX(-6px) scaleX(.7); }
+    .player-svg.scan-left .ear-l { opacity: 0; }
+    .player-svg.scan-right .head { transform: translateX(7px) scaleX(.82); }
+    .player-svg.scan-right .face { transform: translateX(14px); }
+    .player-svg.scan-right .nose { transform: translateX(6px) scaleX(.7); }
+    .player-svg.scan-right .ear-r { opacity: 0; }
+    /* Intro: pod drops into the pouch on the front of the band, then the band flips the pouch to the back */
+    .player-svg .pouchwrap { transform-origin: 101px 73px; transition: transform .5s ease, opacity .4s ease; }
+    .player-svg .podpiece { transform: translateX(54px); transition: transform .55s cubic-bezier(.34,1.05,.5,1); }
+    .player-svg.podin .podpiece { transform: translateX(0); }
+    /* Flip: the pouch swings around the head to the back — constant angular velocity (translateX≈sinθ, scaleX≈cosθ) reads as a smooth turn */
+    .player-svg.flipped .pouchwrap { animation: flipToBack .55s linear forwards; }
+    @keyframes flipToBack {
+      0%   { transform: translateX(0px)    scaleX(1);    opacity: 1; }
+      20%  { transform: translateX(14.2px) scaleX(.951); opacity: 1; }
+      40%  { transform: translateX(27.0px) scaleX(.809); opacity: 1; }
+      60%  { transform: translateX(37.2px) scaleX(.588); opacity: 1; }
+      80%  { transform: translateX(43.7px) scaleX(.309); opacity: 1; }
+      92%  { transform: translateX(45.7px) scaleX(.125); opacity: 1; }
+      100% { transform: translateX(46px)   scaleX(0);    opacity: 0; }
+    }
+    .player-svg .skin { fill: url(#skinGrad); }
+    .player-svg .hair, .player-svg .hairfront { fill: #241c17; }
+    .player-svg .eye { fill: #1b1b26; }
+    .player-svg .eye-hi { fill: #ffffff; }
+    .player-svg .nose { fill: none; stroke: #a67c52; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+    .player-svg .nose-shade { fill: rgba(120,80,45,0.22); }
+    .player-svg .mouth { fill: none; stroke: #8a5f3c; stroke-width: 3.4; stroke-linecap: round; }
+    .player-svg .neck { fill: #c39869; }
+    .player-svg .jersey { fill: #20202b; }
+    .player-svg .brow { fill: #26262f; }
+    .player-svg .skin-shade { fill: rgba(0,0,0,0.07); }
+    .player-svg .neck-shade { fill: rgba(0,0,0,0.10); }
+    .player-svg .jersey-shade { fill: rgba(0,0,0,0.16); }
+    .player-svg { filter: drop-shadow(0 0 30px rgba(111,124,245,0.20)); }
+    .player-svg .collar { fill: var(--accent); }
+    .player-svg .band { fill: var(--accent); transition: fill .2s, filter .2s; }
+    .player-svg .pod { fill: #12121a; stroke: rgba(255,255,255,0.16); stroke-width: 1.5; }
+    .player-svg .podled { fill: var(--good); }
+    .player-svg .pouch { fill: #5763e2; }
+    .player-svg .pouchlip { fill: #3a44b0; }
+    .player-svg.happy .band { fill: var(--good); filter: drop-shadow(0 0 8px rgba(47,174,98,.9)); }
+    .demo.buzz .player-svg .band { fill: var(--accent-2); filter: drop-shadow(0 0 12px rgba(240,163,90,.95)); }
+    .demo.buzz .player-svg .podled { fill: var(--accent-2); }
+    .demo.buzz .player-svg .head { animation: buzzpulse .4s cubic-bezier(.34,1.2,.5,1); }
+    @keyframes buzzpulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+    .scan-pulse { position: absolute; top: 32%; left: 50%; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%; border: 3px solid var(--good); opacity: 0; z-index: 1; }
+    .scan-pulse.go { animation: pulseout .6s ease-out; }
+    @keyframes pulseout { from { transform: scale(.5); opacity: .85; } to { transform: scale(2.6); opacity: 0; } }
+    .buzz-rings { position: absolute; top: 32%; left: 50%; z-index: 1; display: none; }
+    .buzz-rings span { position: absolute; width: 70px; height: 70px; margin: -35px 0 0 -35px; border-radius: 50%; border: 3px solid var(--accent-2); opacity: 0; }
+    .demo.buzz .buzz-rings { display: block; }
+    .demo.buzz .buzz-rings span { animation: buzzring .45s ease-out; }
+    .demo.buzz .buzz-rings span:nth-child(2) { animation-delay: .1s; }
+    .demo.buzz .buzz-rings span:nth-child(3) { display: none; }
+    @keyframes buzzring { from { transform: scale(.6); opacity: .45; } to { transform: scale(1.9); opacity: 0; } }
+    .demo-panel .eyebrow { margin-bottom: 10px; }
+    .demo-panel h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+    .demo-panel p.lead { margin: 14px 0 24px; }
+    .awareness { margin: 22px 0 18px; }
+    .aw-label { display: flex; justify-content: space-between; align-items: baseline; font-size: var(--fs-cap); font-weight: 700; margin-bottom: 8px; }
+    .aw-label span:last-child { color: var(--ink-3); font-weight: 400; }
+    .aw-bar { height: 14px; background: #2a2a3a; border-radius: 999px; overflow: hidden; }
+    .aw-fill { height: 100%; width: 100%; background: linear-gradient(90deg, var(--good), #6bdb9c); border-radius: 999px; transition: width .08s linear; }
+    .demo.buzz .aw-fill { background: var(--accent-2); }
+    .demo-stats { display: flex; gap: 14px; margin: 18px 0 14px; }
+    .dstat { flex: 1; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; text-align: center; }
+    .dstat .n { font-size: 1.7rem; font-weight: 800; line-height: 1; }
+    .dstat .l { font-size: .72rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .08em; margin-top: 6px; }
+    .rate-vs { margin: 4px 0 6px; }
+    .rv-track { position: relative; height: 10px; background: #2a2a3a; border-radius: 999px; overflow: hidden; }
+    .rv-fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--accent); border-radius: 999px; transition: width .25s; }
+    .rv-cap { display: flex; justify-content: space-between; font-size: .74rem; color: var(--ink-3); margin-top: 6px; font-weight: 700; }
+    .demo-status { min-height: 1.6em; font-weight: 700; color: var(--ink-2); margin: 6px 0 4px; }
+    .demo-actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+    .demo-foot { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 6px; flex-wrap: wrap; }
+    .demo-reset { background: none; border: 1px solid var(--line); color: var(--ink-3); font: inherit; font-weight: 700; font-size: .8rem; padding: 7px 14px; border-radius: 999px; cursor: pointer; transition: .15s; }
+    .demo-reset:hover { color: var(--ink); border-color: var(--accent); }
+    .stage-hint { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); background: rgba(18,18,26,0.92); border: 1px solid var(--line); color: var(--ink); font-weight: 700; font-size: .88rem; padding: 9px 18px; border-radius: 999px; max-width: min(90%, 380px); text-align: center; opacity: 0; transition: opacity .3s ease; pointer-events: none; z-index: 3; }
+    .stage-hint.show { opacity: 1; animation: hintpulse 1.7s ease-in-out infinite; }
+    @keyframes hintpulse { 0%,100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.06); } }
+    /* Demo living inside the hero (stacked: paragraph -> animation -> controls) */
+    /* Centered hero: tagline -> headline -> buttons -> paragraph -> animation */
+    .hero-center { text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%; }
+    .hero-tagline { font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; font-size: clamp(1.4rem, 3.3vw, 2.4rem); white-space: nowrap; margin-bottom: 14px; }
+    .hero-center .hero-cta { justify-content: center; margin: clamp(36px, 5vw, 64px) 0 0; }
+    .hero-center p.hero-pair { font-weight: 400; line-height: 1.55; font-size: var(--fs-subhead); color: var(--ink-2); max-width: 52ch; margin: var(--gap) auto var(--gap-lg); }
+    .demo-heading { font-size: var(--fs-header); font-weight: 800; color: var(--ink); letter-spacing: -0.02em; margin: var(--gap-lg) 0 var(--gap); }
+    .stage-intro { text-align: center; color: var(--ink-2); font-size: var(--fs-subhead); line-height: 1.5; max-width: 48ch; margin: 0 auto; padding: clamp(26px, 3.5vw, 42px) 22px 2px; }
+    .hero-center .demo { background: transparent; max-width: none; width: 100%; margin: clamp(56px, 8vw, 104px) auto 0; }
+    .hero-center .demo-stage { min-height: 0; display: block; padding: 0; }
+    .stage-fig { position: relative; height: 500px; display: grid; place-items: center; overflow: hidden; padding: 18px; }
+    .hero-center .stage-fig .player-svg { width: min(440px, 42%); height: auto; }
+    .stage-controls { padding: 16px clamp(16px, 3vw, 30px) 20px; border-top: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+    .hero-center .demo-panel { margin-top: 12px; }
+    .hero-center .awareness { margin: 10px 0; }
+    .hero-center .demo-status { text-align: center; }
+    .hero-center .demo-actions { justify-content: center; }
+    .hero-center .demo-stats, .hero-center .rate-vs { display: none; }
+    @media (max-width: 760px) { .hero-tagline { white-space: normal; font-size: clamp(1.4rem, 6.5vw, 2rem); } }
+
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .nav-right .nav-cta { display: none; }
+      .mobile-menu { display: block; position: absolute; top: 66px; left: 0; right: 0; background: var(--bg-2); border-bottom: 1px solid var(--line);
+        transform: translateY(-12px); opacity: 0; pointer-events: none; transition: .2s; }
+      .mobile-menu.open { transform: none; opacity: 1; pointer-events: auto; }
+      .mobile-menu a { display: block; padding: 15px 22px; color: var(--ink); border-top: 1px solid var(--line); font-weight: 700; }
+      .hero-grid, .how-grid, .founder-grid, .proof-grid, .demo-grid { grid-template-columns: 1fr; }
+      .testimonial { flex-direction: column; align-items: center; text-align: center; }
+      .app-shots { grid-template-columns: 1fr; max-width: 320px; }
+      .app-showcase { grid-template-columns: 1fr; gap: clamp(20px, 5vw, 34px); perspective: none; }
+      .product-scene { width: 100%; max-width: 480px; margin: 0 auto; }
+      .app-showcase .app-shots { flex-wrap: wrap; max-width: 320px; margin: 0 auto; }
+      .app-showcase .phone { height: clamp(500px, 72vh, 760px); }
+      .app-showcase .phone:nth-child(1), .app-showcase .phone:nth-child(2) { transform: none; z-index: auto; }
+      .app-points { grid-template-columns: 1fr; gap: 22px; }
+      .stat-card img { height: 100px; }
+      /* Chart: swipe horizontally to read every player instead of squishing 10 names */
+      .app-colchart .col-bars { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; padding-bottom: 10px; gap: 14px; }
+      .app-colchart .col { flex: 0 0 auto; min-width: 58px; scroll-snap-align: center; }
+      .app-shots .phone:hover, .app-colchart:hover { transform: none; }
+    }
+    @media (max-width: 460px) {
+      .stat-cards { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="header">
-      <a href="index.html" class="logo"><span>SCAN</span><span>BAND</span></a>
-      <div class="header-controls">
-        <button class="header-buy-btn" id="waitlist-btn-header" onclick="openWaitlistModal()">Get Yours</button>
-        <button class="nav-toggle" id="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#simple">Simple</a>
-        <a href="#game-changing">Game-Changing</a>
-        <a href="#about">About the Inventor</a>
-        <a href="#recruiting">Recruiting Resources</a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="logo">SCAN<span class="b">BAND</span></a>
+      <nav class="nav-links">
+        <a href="#demo">How it works</a>
+        <a href="#stakes">Why it matters</a>
+        <a href="#app">The app</a>
+        <a href="#story">My story</a>
       </nav>
-      <nav class="desktop-nav">
-        <button class="header-buy-btn" onclick="openWaitlistModal()">Get Yours</button>
-        <a href="#simple">Simple</a>
-        <a href="#game-changing">Game-Changing</a>
-        <a href="#about">About the Inventor</a>
-        <a href="#recruiting">Recruiting Resources</a>
+      <div class="nav-right">
+        <a href="https://buy.stripe.com/cNi7sM5Sag8v0qT5kCcZa01" class="btn btn-primary nav-cta">Get ScanBand</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#demo">How it works</a>
+      <a href="#stakes">Why it matters</a>
+      <a href="#app">The app</a>
+      <a href="#story">My story</a>
+      <a href="https://buy.stripe.com/cNi7sM5Sag8v0qT5kCcZa01">Get ScanBand</a>
+    </div>
+  </header>
+
+  <!-- HERO + first section: pinned hero that the next section slides up over (WHOOP-style) -->
+  <div class="reveal-stack">
+  <!-- HERO: full-bleed video with overlaid headline (WHOOP-style) -->
+  <section class="hero-video" id="demo">
+    <video class="hero-video-el" id="howVideo" src="Images/Final ScanBand How it Works.mp4" muted loop autoplay playsinline preload="metadata"></video>
+    <div class="hero-video-scrim" aria-hidden="true"></div>
+    <div class="hero-video-content">
+      <div class="wrap">
+        <h1>Scan like <span class="accent">Messi</span><br>Up your game</h1>
+        <p class="hero-video-sub">The first soccer wearable that trains <span class="accent">field vision</span>.</p>
+        <div class="hero-video-actions">
+          <a href="https://buy.stripe.com/cNi7sM5Sag8v0qT5kCcZa01" class="btn btn-primary">Get ScanBand</a>
+          <button type="button" class="btn hero-see" id="howPlay" aria-label="Play the how-it-works video">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            See How It Works — 8 sec
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-cover" aria-hidden="true"></div>
+  </section>
+
+  <!-- WHY IT'S GAME-CHANGING (GRAPH) -->
+  <section id="stakes">
+    <div class="wrap">
+      <!-- Messi vs Premier League forwards -->
+      <div class="vs-card reveal">
+        <div class="vs-side messi">
+          <div class="vs-top">
+            <div class="vs-stat">
+              <div class="vs-num">5</div>
+              <div class="vs-who">Messi</div>
+            </div>
+            <div class="vs-img"><img src="Images/Messi Holding Cup.jpeg" alt="Lionel Messi" /></div>
+          </div>
+          <div class="vs-desc">Averages 5 scans before receiving the ball.</div>
+        </div>
+        <div class="vs-badge">VS</div>
+        <div class="vs-side pl">
+          <div class="vs-top">
+            <div class="vs-stat">
+              <div class="vs-num">2.8</div>
+              <div class="vs-who">Premier League forwards</div>
+            </div>
+            <div class="vs-img logo"><img src="Images/EnglishPremierLeague.webp" alt="Premier League" /></div>
+          </div>
+          <div class="vs-desc">Average 2.8 scans before receiving the ball.</div>
+        </div>
+      </div>
+      <p class="vs-cite reveal">Scans in the seconds before receiving the ball. Source: Geir Jordet.</p>
+    </div>
+  </section>
+  </div><!-- /.reveal-stack -->
+
+  <!-- THE APP: product + app together -->
+  <section class="app-section" id="app">
+    <div class="wrap hero-center">
+      <div class="section-head reveal">
+        <h2>See your scan rate increase</h2>
+        <p>Sync your ScanBand after each session to track your scan rate, directional balance, and chase the pros.</p>
+      </div>
+      <div class="demo">
+        <div class="app-tile">
+          <div class="app-showcase">
+            <div class="product-scene reveal">
+              <img class="ps-band" src="Images/ScanBand Headband with pouch.png" alt="ScanBand headband with pouch and rechargeable pod" />
+              <img class="ps-pod" src="Images/ScanBand Hand built pod.png" alt="" aria-hidden="true" />
+            </div>
+            <div class="app-shots">
+              <div class="phone"><img src="Images/app-sessions.png" alt="ScanBand app — session history and personal bests" /></div>
+              <div class="phone"><img src="Images/app-trends.png?v=4" alt="ScanBand app — trends and how your scan rate compares to the pros" /></div>
+            </div>
+          </div>
+          <div class="freqchart app-colchart">
+            <h3>Scan rate by players</h3>
+            <p class="freq-sub">Compare your scan rate to the world's best.</p>
+            <span class="col-more" aria-hidden="true">Swipe<span class="col-more-arw">→</span></span>
+            <div class="col-scroll">
+            <div class="col-bars">
+              <div class="col you-col"><div class="col-plot"><div class="col-val">0.41</div><div class="col-fill" style="height:10%;background:#f5a623"></div></div><div class="col-name">You</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.52</div><div class="col-fill" style="height:18%;background:rgba(111,124,245,.53)"></div></div><div class="col-name">Ibrahimovic</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.53</div><div class="col-fill" style="height:21%;background:rgba(111,124,245,.57)"></div></div><div class="col-name">Modric</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.56</div><div class="col-fill" style="height:29%;background:rgba(111,124,245,.62)"></div></div><div class="col-name">De Bruyne</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.58</div><div class="col-fill" style="height:34%;background:rgba(111,124,245,.67)"></div></div><div class="col-name">Pirlo</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.60</div><div class="col-fill" style="height:39%;background:rgba(111,124,245,.72)"></div></div><div class="col-name">Mbappé</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.61</div><div class="col-fill" style="height:42%;background:rgba(111,124,245,.77)"></div></div><div class="col-name">Gerrard</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.62</div><div class="col-fill" style="height:45%;background:rgba(111,124,245,.82)"></div></div><div class="col-name">Lampard</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.66</div><div class="col-fill" style="height:55%;background:rgba(111,124,245,.88)"></div></div><div class="col-name">Gündogan</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.76</div><div class="col-fill" style="height:82%;background:rgba(111,124,245,.94)"></div></div><div class="col-name">Fàbregas</div></div>
+              <div class="col"><div class="col-plot"><div class="col-val">0.83</div><div class="col-fill" style="height:100%;background:rgba(111,124,245,1)"></div></div><div class="col-name">Xavi</div></div>
+            </div>
+            </div>
+            <p class="freq-cite">Source: Geir Jordet · 10 selected midfielders / forwards.</p>
+          </div>
+          <div class="app-cta"><a href="#" class="btn btn-primary">Download the app</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF: James quote paired with the 2x forward-pass stat -->
+  <section class="proof">
+    <div class="wrap">
+      <div class="testimonial reveal">
+        <img class="tm-photo" src="Images/James Pic.png" alt="James O." />
+        <div class="tm-body">
+          <p class="tm-quote">“I love the ScanBand! It's lightweight, reminds me to scan, and helps me look for things when I’m scanning.”</p>
+          <div class="tm-attr">
+            <div class="tm-name">James O.</div>
+            <div class="tm-sub">Albion SC San Diego</div>
+            <div class="tm-sub">MLS Next</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial jordet reveal">
+        <img class="tm-photo" src="Images/Revised Jordet Pic.png" alt="Geir Jordet, PhD" />
+        <div class="tm-body">
+          <p class="tm-quote">“Players with higher scan rates make over twice as many successful forward passes than those who scan less.”</p>
+          <div class="tm-attr">
+            <div class="tm-name">Geir Jordet, PhD</div>
+            <div class="tm-sub">Leading Researcher on Scanning and Elite Performance</div>
+          </div>
+          <p class="tm-cite">Source: Jordet, Bloomfield &amp; Heijmerkx (2013)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER / RECRUITING (inline story slider) -->
+  <section class="founder" id="story">
+    <div class="wrap">
+      <div class="founder-carousel">
+        <div class="founder-track" id="founderTrack">
+          <div class="founder-slide">
+            <div class="founder-grid">
+              <div class="founder-photo zoom"><img src="Images/Connor Quakes.jpg" alt="Connor Owen playing for the San Jose Earthquakes academy" /></div>
+              <div>
+                <h2>Get recruited by top colleges or go pro</h2>
+                <p>I'm Connor Owen, founder of ScanBand. I'm an 18-year-old D1 soccer player for Columbia and former San Jose Earthquakes Academy (MLS Next) player. I wasn't the strongest or the fastest. But I obsessed over the mental side of the game, and specifically scanning. And things started to change.</p>
+                <button type="button" class="link" onclick="founderMove(1)">Read my full story →</button>
+              </div>
+            </div>
+          </div>
+          <div class="founder-slide">
+            <div class="founder-grid">
+              <div class="founder-photo"><img src="Images/National Team Pic.jpg" alt="Connor at a national team camp" /></div>
+              <div>
+                <h2>It changed everything</h2>
+                <p>As my scanning improved, so did my game. I got invited to national team camps and all-star games, and was recruited to the Quakes. Coaches recognized my awareness and decision-making.</p>              </div>
+            </div>
+          </div>
+          <div class="founder-slide">
+            <div class="founder-grid">
+              <div class="founder-photo"><img src="Images/Columbia Post.png" alt="Connor's Columbia commitment" /></div>
+              <div>
+                <h2>Recruited to Columbia</h2>
+                <p>Top D1 schools recruited me, and I committed to play at Columbia. Time and again, coaches said it was my field vision and reading of the game that set me apart.</p>              </div>
+            </div>
+          </div>
+          <div class="founder-slide text-only">
+            <div class="fs-text">
+              <h2>The problem</h2>
+              <p>Scanning was <strong>hard</strong> to improve. There was no tangible way to train it or measure it. I watched teammates who wanted to get better but didn't know how.</p>            </div>
+          </div>
+          <div class="founder-slide">
+            <div class="founder-grid">
+              <div class="founder-photo"><img src="Images/ScanBand Profile Pic (Black headband).png" alt="Connor Owen holding the ScanBand" /></div>
+              <div>
+                <h2>The solution</h2>
+                <p>At 12, I invented and licensed the Bookie Cushion, now sold at Barnes &amp; Noble and Walmart. I combined my skills in soccer and entrepreneurship to build the ScanBand: a way to train and measure the skill that changed my game.</p>              </div>
+            </div>
+          </div>
+        </div>
+        <div class="founder-count" aria-hidden="true"><span class="fc-cur">01</span> / <span class="fc-tot">05</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO VIDEO -->
+  <section id="video">
+    <div class="wrap">
+      <div class="video-frame reveal">
+        <iframe src="https://www.youtube-nocookie.com/embed/WOQ3Pb7sl1w?rel=0"
+                title="ScanBand — how it works" loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <div class="final-box reveal">
+        <h2>Start building elite awareness</h2>
+        <p>Train yourself to scan more, recognize options sooner, and make faster decisions on the field.</p>
+        <a href="https://buy.stripe.com/cNi7sM5Sag8v0qT5kCcZa01" class="btn btn-primary">Get ScanBand</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot-inner">
+      <a href="index.html" class="logo">SCAN<span class="b">BAND</span></a>
+      <nav class="foot-links">
+        <a href="#demo">How it works</a>
+        <a href="#stakes">Why it matters</a>
+        <a href="#app">The app</a>
+        <a href="#story">My story</a>
+        <a href="mailto:ceowen888@gmail.com">Contact</a>
       </nav>
+      <span>© 2026 ScanBand</span>
     </div>
+  </footer>
 
-    <header class="main-header">
-      <h1>The First Soccer Wearable That Trains Field Vision</h1>
-      <button class="btn" onclick="openWaitlistModal()">Get Yours</button>
-      <h2>ScanBand detects when you check your shoulder and vibrates when you're not scanning, helping you build elite awareness in real time.</h2>
-      <div class="video-container">
-        <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/WOQ3Pb7sl1w" title="Soccer scanning importance training video"
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="features-wrapper">
-        <ul class="features">
-          <li>Detects your scans & buzzes <br> when you don't</li>
-          <li>Gives you real-time feedback <br> while you play</li>
-          <li>Like a coach on your head reminding you to scan until it becomes instinct</li>
-        </ul>
-      </div>
-    </header>
-
-    <section class="simple-section" id="simple">
-      <h2 class="simple-title">Simple.</h2>
-      <div class="simple-content-wrapper">
-        <div class="simple-content-top">
-          <div class="simple-text">
-            <h3>ScanBand has two parts:</h3>
-            <ul class="simple-features">
-              <li>A rechargeable vibrating pod. The pod knows when your head turns. When you're scanning like Messi, it's happy; when you're not, it vibrates to remind you.</li>
-              <li>A high-quality, washable headband. The headband's stitched-in compartment holds the pod, which slides out easily for charging</li>
-            </ul>
-          </div>
-        </div>
-        <div class="simple-gallery">
-          <div class="gallery-item">
-            <img src="Images/ScanBand Pod.png" alt="ScanBand device showing rechargeable pod and headband" loading="lazy">
-          </div>
-          <div class="gallery-item">
-            <img src="Images/ScanBand Headband.png" alt="ScanBand headband compartment detail" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="game-changing-section" id="game-changing">
-      <h2 class="game-changing-title">Game-Changing.</h2>
-      <div class="game-changing-intro">
-        <p>The world's best players seem to have eyes in the back of their head. They always know where teammates and opponents are. That's because they scan!</p>
-        <p><strong>Scanning changes your game, giving you a mental map of the field, more time on the ball, quicker speed of play, and better decisions.</strong></p>
-      </div>
-
-      <div class="scanning-stats">
-        <div class="stat-card messi-stat">
-          <div class="stat-number">5</div>
-          <div class="stat-image-placeholder">
-            <!-- Placeholder for Messi image - replace src with your image URL -->
-            <img src="Images/Messi Holding Cup.jpeg" alt="Messi holding World Cup trophy">
-          </div>
-          <div class="stat-info">
-            <h3>Messi</h3>
-            <p>Averages 5 scans before receiving the ball.</p>
-          </div>
-        </div>
-
-        <div class="stat-card premier-league-stat">
-          <div class="stat-number">2.8</div>
-          <div class="stat-image-placeholder">
-            <!-- Placeholder for Premier League players image - replace src with your image URL -->
-            <img src="Images/Premier league forwards.webp" alt="Premier League forwards collage">
-          </div>
-          <div class="stat-info">
-            <h3>Premier League Forwards</h3>
-            <p>Average 2.8 scans before receiving the ball.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="story-section" id="about">
-      <h2 class="story-title">Why I Created ScanBand.</h2>
-
-
-
-      <div class="story-timeline">
-        <!-- Introduction Slide -->
-        <div class="story-slide" data-slide="intro">
-          <div class="story-content">
-            <div class="story-text">
-              <p>I'm Connor Owen, a 17-year-old D1 soccer player for Columbia and former San Jose Earthquakes Academy (MLS Next) player. I've always loved two things: creating and soccer.</p>
-              <p>When I was 12, I invented the <strong><a href="https://www.amazon.com/Genuine-Fred-Cushion-Whoopee-Bookmark/dp/B09WPZJLF5/ref=sr_1_2?crid=23H2UEWVGN43B&dib=eyJ2IjoiMSJ9.NFvr4cht5c2mFvjNzmyQQs-e2-m0EhCw777STv6kvte0VSVykb6YzEnwT6pi0DHDuDDhSaXLZA1t4_aDfK88qGAQqJbhtO3xAaMNvds3waPB6WUgGxcPCwyKpf1DPEaKGI7AMgOcPTP463wFgvBtv3B88gi2p8Gfn73ZEpYHkLe7HyJ3VWUOHhN3Eh00RcGrDmN7oCAa-Wp4PZnN-hrjAp3_z4ls1oUWuWMqwXIzR0TIpbDy_ND9RTH8hqRqDVR8tQeLMNN3CidgTZ7MumP4zdgvRv8GFf5ptQE2CjVPTKU.w3k0W0XEsPI-DLAUC6yWWNbgNJ6g1nrW91iB7YXVfR0&dib_tag=se&keywords=bookie%2Bcushion&qid=1757644456&sprefix=bookie%2Bcushion%2Caps%2C122&sr=8-2&th=1" target="_blank" style="color: var(--primary-green); text-decoration: underline;">Bookie Cushion</a></strong>, a bookmark that doubles as a whoopee cushion. I balanced the project with school and soccer. I made prototypes, had it manufactured, and eventually licensed it to Fred & Friends. It's now sold at places like Barnes & Noble and Walmart.</p>
-              <p>I was a solid soccer player at the time, but never the best player. I was on the B team at my old club. I wanted to level up. I knew I wasn't the strongest or the fastest. But I obsessed over the mental side of the game, and specifically scanning. And things started to change.</p>
-            </div>
-            <div class="story-gallery single-image">
-              <div class="gallery-item">
-                <img src="Images/ScanBand Profile Pic (Black headband).png" alt="Connor Owen wearing the black ScanBand">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-        <!-- National Recognition Slide -->
-        <div class="story-slide side-by-side-layout" data-slide="national">
-          <div class="story-content">
-            <div class="story-text">
-              <h3>National Recognition</h3>
-              <p>I got invited to national team camps and all-star games.</p>
-            </div>
-            <div class="story-gallery single-image">
-              <div class="gallery-item">
-                <img src="Images/National Team Pic.jpg" alt="Connor at Chula Vista Elite Athlete Training Center">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- College Recruitment Slide -->
-        <div class="story-slide side-by-side-layout" data-slide="college">
-          <div class="story-content">
-            <div class="story-text">
-              <h3>College Recruitment</h3>
-              <p>I was recruited by top D1 schools and committed to Columbia. Coaches consistently pointed to my field awareness and decision-making.</p>
-            </div>
-            <div class="story-gallery single-image">
-              <div class="gallery-item">
-                <img src="Images/Columbia Post.png" alt="Connor's Columbia recruitment card">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- The Problem Slide -->
-        <div class="story-slide" data-slide="problem">
-          <div class="story-content single-column">
-            <div class="story-text centered">
-              <h3>The Problem</h3>
-              <p>As valuable as scanning was for me, it was one of the hardest things for me to improve. I noticed my teammates wanted to improve but struggled.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- The Solution Slide -->
-        <div class="story-slide" data-slide="solution">
-          <div class="story-content single-column">
-            <div class="story-text centered">
-              <h3>The Idea</h3>
-              <p>That's when I realized I could combine my two passions, soccer and creating.</p>
-              <p><strong>And the ScanBand was born.</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-development-section">
-      <h2 class="product-development-title">Product Development Timeline</h2>
-
-      <div class="product-development-timeline">
-        <!-- Initial Prototype Slide -->
-        <div class="story-slide text-above-image" data-slide="prototype">
-          <div class="story-content single-column">
-            <div class="story-text centered">
-              <h3>Initial Prototype</h3>
-              <p>First working version - January 2025</p>
-              <p>Started with Arduino boards to prove the concept and test different vibration timings.</p>
-            </div>
-            <div class="story-gallery prototype-gallery-large">
-              <div class="gallery-item">
-                <img src="Images/ScanBand Prototype 1.jpg" alt="Initial Arduino prototype on breadboard" loading="lazy">
-              </div>
-              <div class="gallery-item">
-                <img src="Images/ScanBand Prototype 2.jpg" alt="Early circuit board with sensors" loading="lazy">
-              </div>
-              <div class="gallery-item">
-                <img src="Images/ScanBand Prototype 3.jpg" alt="Testing setup with LED indicators" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Provisional Patent Slide -->
-        <div class="story-slide" data-slide="patent">
-          <div class="story-content single-column">
-            <div class="story-text centered">
-              <h3>Provisional Patent</h3>
-              <p>Filed and approved - February 2025</p>
-            </div>
-            <div class="story-gallery single-image">
-              <div class="gallery-item">
-                <img src="Images/Patent Pending.png" alt="Patent Pending certification badge" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Professional Design Slide -->
-        <div class="story-slide text-above-image" data-slide="professional-design">
-          <div class="story-content single-column">
-            <div class="story-text centered">
-              <h3>Testing and Professional Design</h3>
-              <p>Worked with a designer/manufacturer to create a lightweight & durable device - February 2025</p>
-            </div>
-            <div class="story-gallery single-image">
-              <div class="gallery-item">
-                <img src="Images/ScanBand Pod Design.avif" alt="Professional ScanBand Pod design specifications" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="video-placeholder-container large-videos">
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Qu7f2ByYMxI" title="ScanBand Testing Video 1"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/GfyXZyIj74Y" title="ScanBand Testing Video 2"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-        </div>
-
-        <!-- Manufactured Product Slide -->
-        <div class="story-slide" data-slide="manufactured">
-          <div class="story-content">
-            <div class="story-text">
-              <h3>Manufactured Product</h3>
-              <p>Produced and received - June 2025</p>
-              <p>First batch of professionally manufactured ScanBands. Consistent performance across all units.</p>
-            </div>
-            <div class="story-gallery manufactured-gallery-large">
-              <div class="gallery-item">
-                <img src="Images/ScanBand Headbands.jpg" alt="Stack of manufactured ScanBand headbands" loading="lazy">
-              </div>
-              <div class="gallery-item">
-                <img src="Images/ScanBand 1 Unit.jpeg" alt="Single ScanBand unit with pod and headband" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- More Testing Slide -->
-        <div class="story-slide" data-slide="more-testing">
-          <div class="story-content single-column">
-            <div class="story-text centered">
-              <h3>More Testing</h3>
-              <p>Additional player and coach feedback - July 2025</p>
-              <p>Expanded testing, gathered feedback, and made final adjustments.</p>
-            </div>
-          </div>
-          <!-- User Feedback -->
-          <div class="users-say-content" style="margin-top: clamp(32px, 6vw, 48px);">
-            <div class="video-container">
-              <video width="100%" height="100%" controls>
-                <source src="Images/James ScanBand.mov" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="users-say-text">
-              <p>"Yeah, I really love the ScanBand! It's super lightweight and definitely reminds you to scan and helps me look for things when I'm scanning. I overall think it's really great in a game situation. The ScanBand is amazing!"
-              <br><br>
-              <strong>- James O., Albion SC San Diego MLS Next</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Final Product Slide -->
-        <div class="story-slide" data-slide="final-product">
-          <div class="story-content">
-            <div class="story-text">
-              <h3>Larger Scale Production</h3>
-              <p>Ready for player version - August 2025</p>
-            </div>
-            <div class="story-gallery manufactured-gallery-large">
-              <div class="gallery-item">
-                <img src="Images/ScanBand 1.png" alt="Final ScanBand product - complete unit with pod and headband" loading="lazy">
-              </div>
-              <div class="gallery-item">
-                <img src="Images/ScanBand Headband.png" alt="Final ScanBand product - sleek headband design" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="recruiting-section">
-      <h2 class="recruiting-title" id="recruiting">Free Soccer College Recruiting Resources</h2>
-      <div class="recruiting-content">
-        <div class="recruiting-text">
-          <h3>College Soccer Recruiting Spreadsheet</h3> <br>
-          <p>As a Division 1 player who went through the recruiting process, I'm sharing the spreadsheet that helped me stay organized. <br><br>
-          I used it to track my outreach to coaches, keep contact info in one place, and take notes throughout the process.</p>
-        </div>
-        <img src="Images/Columbia Post.png" alt="Connor Owen Columbia University soccer recruiting post announcement" class="recruiting-image">
-      </div>
-      <div class="recruiting-btn-container">
-        <button id="recruiting-btn" class="recruiting-btn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" fill="currentColor"/>
-          </svg>
-          Access Free Recruiting Spreadsheet
-        </button>
-      </div>
-    </section>
-
-    <!-- Waitlist Modal -->
-    <div id="waitlist-modal" class="modal-overlay">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>ScanBand is currently sold out.</h3>
-          <button class="close-btn" onclick="closeWaitlistModal()">&times;</button>
-        </div>
-        <div class="modal-body" id="waitlist-modal-body">
-          <p>Join the waitlist to be notified when it becomes available.</p>
-          <form id="waitlist-form">
-            <input type="email" id="waitlist-email-input" placeholder="Email address" required>
-            <button type="submit" class="modal-btn">Join Waitlist</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- Email Collection Modal -->
-    <div id="email-modal" class="modal-overlay">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Join My Email List</h3>
-          <button id="close-modal" class="close-btn">&times;</button>
-        </div>
-        <div class="modal-body">
-          <p>Enter your email to get the spreadsheet and join my monthly email list:</p>
-          <form id="email-form" action="https://formspree.io/f/mzzvegnj" method="POST">
-            <input type="email" name="email" id="email-input" placeholder="Enter your email address" required>
-            <input type="hidden" name="_subject" value="New ScanBand Email Signup">
-            <input type="hidden" name="_next" value="https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing">
-            <button type="submit" class="modal-btn">Get Spreadsheet Access</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
   <script>
-    function openWaitlistModal() {
-      document.getElementById('waitlist-modal').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+    // Inline founder story slider
+    let fcIndex = 0, fcCount = 0;
+    function founderGo(i){
+      const track = document.getElementById('founderTrack');
+      if (!track || !fcCount) return;
+      fcIndex = ((i % fcCount) + fcCount) % fcCount; // wrap around either end
+      track.style.transform = 'translateX(' + (-fcIndex * 100) + '%)';
+      const cur = String(fcIndex + 1).padStart(2, '0'), tot = String(fcCount).padStart(2, '0');
+      const carousel = track.closest('.founder-carousel'), count = carousel && carousel.querySelector('.founder-count');
+      if (count){ count.querySelector('.fc-cur').textContent = cur; count.querySelector('.fc-tot').textContent = tot; }
     }
-
-    function closeWaitlistModal() {
-      document.getElementById('waitlist-modal').style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // Modal functionality
-      const modal = document.getElementById('email-modal');
-      const recruitingBtn = document.getElementById('recruiting-btn');
-      const closeModal = document.getElementById('close-modal');
-      const emailForm = document.getElementById('email-form');
-
-      // Open modal when recruiting button is clicked
-      recruitingBtn.addEventListener('click', function() {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      });
-
-      // Close modal when X is clicked
-      closeModal.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      });
-
-      // Close modal when clicking outside of it
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-          document.body.style.overflow = 'auto';
-        }
-      });
-
-      // Handle email form submission with Formspree
-      emailForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const formData = new FormData(emailForm);
-
-        fetch(emailForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        }).then(response => {
-          if (response.ok) {
-            // Check if mobile device
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-            if (isMobile) {
-              // On mobile, show loading message and redirect
-              document.querySelector('.modal-body').innerHTML = `
-                <p style="text-align: center; font-weight: 600; color: var(--primary-green);">
-                  ✅ Success! Redirecting to spreadsheet...
-                </p>
-                <p style="text-align: center; color: var(--text-gray); font-size: 0.9rem;">
-                  If it doesn't redirect automatically, <a href="https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing" style="color: var(--primary-green);">click here</a>
-                </p>
-              `;
-
-              // Redirect after 2 seconds
-              setTimeout(() => {
-                window.location.href = 'https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing';
-              }, 2000);
-            } else {
-              // On desktop, close modal and open new tab
-              modal.style.display = 'none';
-              document.body.style.overflow = 'auto';
-              window.open('https://docs.google.com/spreadsheets/d/10fwxPTmts1cDnfRQasEbWcKQ1dFG6FxdC6N1Whpv0Js/edit?usp=sharing', '_blank');
-            }
-          } else {
-            alert('Something went wrong. Please try again.');
-          }
-        }).catch(error => {
-          alert('Something went wrong. Please try again.');
+    function founderMove(d){ founderGo(fcIndex + d); }
+    (function(){
+      const track = document.getElementById('founderTrack');
+      if (!track) return;
+      fcCount = track.children.length;
+      const carousel = track.closest('.founder-carousel');
+      if (carousel){
+        let tsx = 0, tsy = 0, swiped = false;
+        carousel.addEventListener('touchstart', function(e){ const t = e.changedTouches[0]; tsx = t.clientX; tsy = t.clientY; swiped = false; }, { passive: true });
+        carousel.addEventListener('touchend', function(e){
+          const t = e.changedTouches[0], dx = t.clientX - tsx, dy = t.clientY - tsy;
+          if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { swiped = true; founderMove(dx < 0 ? 1 : -1); } // swipe left = next, right = prev
+        }, { passive: true });
+        carousel.addEventListener('click', function(e){
+          if (swiped) { swiped = false; return; }      // ignore the click that trails a swipe
+          if (e.target.closest('button, a')) return;   // let the "Read my full story" link act
+          founderMove(1);                              // tap/click anywhere = next (loops at the end)
         });
-      });
+      }
+      founderGo(0);
+    })();
 
-      document.getElementById('waitlist-modal').addEventListener('click', function(e) {
-        if (e.target === this) closeWaitlistModal();
-      });
+    // App chart: show a fade + "Swipe" cue only while there's more chart to scroll to
+    (function(){
+      const chart = document.querySelector('.app-colchart');
+      const bars = chart && chart.querySelector('.col-bars');
+      if (!bars) return;
+      function update(){
+        const max = bars.scrollWidth - bars.clientWidth;
+        chart.classList.toggle('scrollable', max > 4);
+        chart.classList.toggle('at-end', bars.scrollLeft >= max - 4);
+      }
+      bars.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
 
-      document.getElementById('waitlist-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = document.getElementById('waitlist-email-input').value;
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.addEventListener('click', e => { if (e.target.tagName === 'A') mobileMenu.classList.remove('open'); });
 
-        fetch('https://formspree.io/f/mzzvegnj', {
-          method: 'POST',
-          body: JSON.stringify({ email: email, _subject: 'ScanBand Waitlist Signup' }),
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
-        }).then(response => {
-          if (response.ok) {
-            document.querySelector('#waitlist-modal .modal-content').innerHTML = `
-              <div style="padding: clamp(32px, 6vw, 48px); text-align: center; position: relative;">
-                <button onclick="closeWaitlistModal()" style="position: absolute; top: -16px; right: -8px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-gray); line-height: 1;">&times;</button>
-                <p style="font-weight: 600; color: var(--text-dark); font-size: 1.15rem; margin: 0;">
-                  You're on the list! We'll email you as soon as the ScanBand is available.
-                </p>
-              </div>
-            `;
-          } else {
-            alert('Something went wrong. Please try again.');
-          }
-        }).catch(() => {
-          alert('Something went wrong. Please try again.');
-        });
-      });
-
-      // Mobile navigation toggle
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-
-      navToggle.addEventListener('click', function() {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      });
-
-      // Close mobile menu when clicking on a link
-      navMenu.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A') {
-          navToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-        }
-      });
-
-      // Close mobile menu when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-          navToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-        }
-      });
-
-      // Intersection Observer for scroll animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      }, observerOptions);
-
-      // Observe sections for animations
-      const sectionsToAnimate = document.querySelectorAll('.main-sections, .about-section, .users-say-section, .recruiting-section');
-      sectionsToAnimate.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-        observer.observe(section);
-      });
-
-      // Story section animations
-      const storyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      }, {
-        threshold: 0.2,
-        rootMargin: '0px 0px -100px 0px'
-      });
-
-      // Observe story slides
-      const storySlides = document.querySelectorAll('.story-slide');
-      storySlides.forEach(slide => {
-        storyObserver.observe(slide);
-      });
-
-      // Add CSS for animation
-      const style = document.createElement('style');
-      style.textContent = `
-        .animate-in {
-          opacity: 1 !important;
-          transform: translateY(0) !important;
-        }
-      `;
-      document.head.appendChild(style);
-    });
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
+
+  <script>
+    // Hero video: silent looping preview -> play with sound + controls
+    (function(){
+      const btn = document.getElementById('howPlay');
+      const vid = document.getElementById('howVideo');
+      const hero = btn && btn.closest('.hero-video');
+      if (!btn || !vid || !hero) return;
+      function playHero(){
+        vid.muted = false;
+        vid.loop = false;
+        vid.controls = false;
+        vid.currentTime = 0;
+        vid.play();
+        hero.classList.add('playing');
+      }
+      function resetHero(){
+        vid.controls = false;
+        vid.muted = true;
+        vid.loop = true;
+        vid.currentTime = 0;
+        hero.classList.remove('playing');
+        vid.play().catch(function(){});
+      }
+      btn.addEventListener('click', playHero);
+      // When the video finishes, return to the original silent-preview state (overlay + headline)
+      vid.addEventListener('ended', resetHero);
+      // Clicking "How it works" in the nav plays the video (after the anchor scrolls to it)
+      document.querySelectorAll('a[href="#demo"]').forEach(function(a){
+        a.addEventListener('click', function(){ setTimeout(playHero, 500); });
+      });
+    })();
+  </script>
+
+  <!-- Dim the pinned hero as the next section slides up over it (WHOOP-style) -->
+  <script>
+    (function(){
+      var hero = document.querySelector('.hero-video');
+      var cover = document.querySelector('.hero-cover');
+      if(!hero || !cover) return;
+      var MAX = 0.72;
+      var ticking = false;
+      function update(){
+        ticking = false;
+        var h = hero.offsetHeight || 1;
+        var p = Math.min(Math.max(window.scrollY / h, 0), 1);
+        cover.style.opacity = (p * MAX).toFixed(3);
+      }
+      function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+      update();
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', update);
+    })();
+  </script>
+
 </body>
 
 </html>

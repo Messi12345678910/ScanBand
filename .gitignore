@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Netlify local state
+.netlify/
+.netlify-site-id
+
+# Oversized video (hosted on YouTube instead — exceeds GitHub's 100 MB limit)
+Images/ScanBand Vid Shortened For Embedded Site Video.mp4
+
+# Unused legacy video (superseded by "Final ScanBand How it Works.mp4")
+Images/ScanBand How it Works.mp4
